@@ -1,0 +1,14 @@
+menu:
+  home: 首页
+  article: 文章
+  works: 作品
+  music: 音乐
+  about: 关于
+  docs: 文档
+  archive: 归档
+
+aside:
+  introduction: 简介
+  archive: 文章分类
+  tag: 文章标签
+  firend_link: 友情链接

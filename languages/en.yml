@@ -1,0 +1,14 @@
+menu:
+  home: Home
+  article: Article
+  works: Works
+  music: Music
+  about: About
+  docs: Docs
+  archive: Archive
+
+aside:
+  introduction: Introduction
+  archive: Archives
+  tag: Tags
+  firend_link: Firend Link

@@ -1,0 +1,30 @@
+
+# Site
+title: MINFIVE
+subtitle: MINFIVE BLOG
+subtitle_desc: 日常学习与兴趣交流
+keywords: minfive, minfive blog, 前端开发, 全栈开发, node.js, javascript
+description: 日常学习与兴趣交流的个人博客
+introduction: 不思量，自难忘！
+logo: http://oo12ugek5.bkt.clouddn.com/images/base-logo.png
+qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
+default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
+author:
+  name: minfive
+  github: https://github.com/Mrminfive
+
+# Menu
+menu:
+  home: /
+  article: /article
+  works: /demo
+  music: /music
+  about: /about
+
+highlight_theme: normal
+
+# Busuanzi
+busuanzi: true
+
+# Baidu statistic
+baidu_statistic: e3267498201dfa9699a5c509424709d6
