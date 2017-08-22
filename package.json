@@ -1,0 +1,15 @@
+{
+  "name": "hexo-theme-skapp",
+  "version": "1.0.0",
+  "description": "hexo扁平化主题",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-theme"
+  ],
+  "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+  "license": "MIT"
+}
