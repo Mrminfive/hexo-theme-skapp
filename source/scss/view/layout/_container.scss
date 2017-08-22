@@ -1,0 +1,25 @@
+body {
+    @media screen and (min-width: $mq-desktop--wide) {
+        .page__container {
+            width: $mq-desktop--wide - 30px;
+        }
+    }
+
+    @media screen and (min-width: $mq-desktop) {
+        .page__container {
+            width: $mq-desktop - 30px;
+        }
+    }
+
+    @media screen and (min-width: $mq-mobile) {
+        .page__container {
+            width: calc(100% - 30px);
+        }
+    }
+}
+
+.page__container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}

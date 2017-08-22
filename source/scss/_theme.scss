@@ -1,0 +1,26 @@
+/**
+ * blog theme 
+ */
+
+$main-color: #19abd6                                !default;
+$main-color--hover: lighten($main-color, 10%)       !default;
+
+$font-family: 'PT Sans Narrow',sans-serif           !default;
+
+$main-fc: #a4b1bf                                   !default;
+$main-fs: 16px                                      !default;
+$main-lh: 1.7                                       !default;
+
+$title-fc: #242f35                                  !default;
+
+$hint-fc: #19abd6                                   !default;
+
+$bgc--main: #fff                                    !default;
+$bgc--bottom: #242f35                               !default;
+$bgc--footer: #2d383e                               !default;
+
+$transition: .3s                                    !default;
+
+$mq-desktop--wide: 1280px                           !default;
+$mq-desktop: 980px                                  !default;
+$mq-mobile: 736px                                   !default;

@@ -5,3 +5,25 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    font-family: $font-family;
+    font-size: $main-fs;
+    color: $main-fc;
+
+    background-color: $bgc--main;
+}
+
+.link {
+    font-size: inherit;
+    text-decoration: none;
+    transition: color $transition;
+
+    &:hover {
+        color: $main-color--hover;
+    }
+}
