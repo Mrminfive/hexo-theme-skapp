@@ -13,14 +13,6 @@ author:
   name: minfive
   github: https://github.com/Mrminfive
 
-# Icon
-icon:
-  16x16: http://oo12ugek5.bkt.clouddn.com/images/favicon-16x16.ico
-  32x32: http://oo12ugek5.bkt.clouddn.com/images/favicon-32x32.ico
-  48x48: http://oo12ugek5.bkt.clouddn.com/images/favicon-48x48.ico
-  64x64: http://oo12ugek5.bkt.clouddn.com/images/favicon-64x64.ico
-  128x128: http://oo12ugek5.bkt.clouddn.com/images/favicon-128x128.ico
-
 # Menu
 menu:
   home: /

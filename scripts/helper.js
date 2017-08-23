@@ -6,8 +6,7 @@ const
 
 const 
     publicDir   = hexo.public_dir,
-    sourceDir   = hexo.source_dir,
-    route       = hexo.route;
+    sourceDir   = hexo.source_dir;
 
 // Hexo extensions
 hexo.extend.helper.register('header_menu', function(className) {

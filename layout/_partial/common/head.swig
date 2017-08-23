@@ -14,17 +14,24 @@
 
 <link rel="canonical" href="{{ url }}">
 
-<link rel="icon" type="image/x-icon" href="{{ config.icon.16x16|default(theme.icon.16x16) }}" sizes="16x16">
-<link rel="icon" type="image/x-icon" href="{{ config.icon.32x32|default(theme.icon.32x32) }}" sizes="32x32">
-<link rel="icon" type="image/x-icon" href="{{ config.icon.48x48|default(theme.icon.48x48) }}" sizes="48x48">
-<link rel="icon" type="image/x-icon" href="{{ config.icon.64x64|default(theme.icon.64x64) }}" sizes="64x64">
-<link rel="icon" type="image/x-icon" href="{{ config.icon.128x128|default(theme.icon.128x128) }}" sizes="128x128">
+<link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('img/apple-touch-icon-57x57.png') }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('img/apple-touch-icon-114x114.png') }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('img/apple-touch-icon-72x72.png') }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('img/apple-touch-icon-144x144.png') }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('img/apple-touch-icon-60x60.png') }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('img/apple-touch-icon-120x120.png') }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('img/apple-touch-icon-76x76.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('img/apple-touch-icon-152x152.png') }}">
+<link rel="icon" type="image/png" href="{{ url_for('img/android-chrome-192x192.png') }}" sizes="192x192">
+<link rel="icon" type="image/png" href="{{ url_for('img/android-chrome-144x144.png') }}" sizes="144x144">
+<link rel="icon" type="image/png" href="{{ url_for('img/favicon-16x16.png') }}" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ url_for('img/favicon-32x32.png') }}" sizes="32x32">
 
 <!-- Prefetch -->
 {% include './prefetch.swig' %}
 
 <!-- CSS -->
-{{ css('sass/base/index') }}
+{{ css('scss/base/index') }}
 
 <!-- RSS -->
 {{ feed_tag('atom.xml') }}

@@ -2,7 +2,7 @@
     {% set arr = num_toArray(page.total) %}
     {% for p in arr %}
         {% if p > 1 %}
-        <link rel="prefetch" href="{{ url_for(config.fragments_generator.dir + '/' + config.fragments_generator.index_dir + '/' + p + '/') }}" />
+        <link rel="prefetch" href="{{ url_for(config.pagination_dir + '/' + p + '/') }}" />
         {% endif %}
     {% endfor %}
 {% endif %}
@@ -11,7 +11,7 @@
     {% set arr = num_toArray(page.total) %}
     {% for p in arr %}
         {% if p > 1 %}
-        <link rel="prefetch" href="{{ url_for(config.fragments_generator.dir + '/' + config.category_dir + '/' + page.category + '/' + p + '/') }}" />
+        <link rel="prefetch" href="{{ url_for(config.category_dir + '/' + page.category + '/' + p + '/') }}" />
         {% endif %}
     {% endfor %}
 {% endif %}
@@ -20,7 +20,7 @@
     {% set arr = num_toArray(page.total) %}
     {% for p in arr %}
         {% if p > 1 %}
-        <link rel="prefetch" href="{{ url_for(config.fragments_generator.dir + '/' + config.tag_dir + '/' + page.tag + '/' + p + '/') }}" />
+        <link rel="prefetch" href="{{ url_for(config.tag_dir + '/' + page.tag + '/' + p + '/') }}" />
         {% endif %}
     {% endfor %}
 {% endif %}
