@@ -31,6 +31,12 @@
     {% endblock %}
 
     {% block pagejs %}
+        <!-- build:js js/common.js -->
+            <script type="text/javascript" src="js/common/utils.js"></script>
+            <script type="text/javascript" src="js/common/pack.js"></script>
+            <script type="text/javascript" src="js/common/animation.js"></script>
+            <script type="text/javascript" src="js/layout/back-top.js"></script>
+        <!-- endbuild -->
     {% endblock %}
 </body>
 </html>

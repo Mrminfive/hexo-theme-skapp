@@ -1,0 +1,33 @@
+$back-top-size: 50px !default;
+
+.back-top {
+    position: fixed;
+    display: block;
+    width: $back-top-size;
+    height: $back-top-size;
+    font-size: $back-top-size / 2;
+    right: 1em;
+    bottom: 1em;
+    text-align: center;
+    color: #fff;
+    transition: background $transition, opacity $transition;
+    background: $main-color;
+    background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
+    background-size: 200% auto;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+
+    &:hover {
+        background-position: right center;
+    }
+
+    & > i {
+        display: inline-block;
+        line-height: $back-top-size;
+    }
+
+    &--hidden {
+        opacity: 0;
+    }
+}
