@@ -70,11 +70,25 @@
 
         toggle: function() {
             if (this.status) return;
-            this.status = true;
+            this.status = false;
 
             this.index === 0 || this.index === this.record.length && (this.status = true);
 
             this._toggle();
+        },
+
+        lastStart: function() {
+            var self = this;
+
+            this.status = false;
+            this.index = this.record.length - 1;
+            this.dir = -1;
+
+            this.record.forEach(function(record) {
+                self.ele.classList.add(record.className);
+            });
+
+            return this;
         },
 
         end: function(fun) {

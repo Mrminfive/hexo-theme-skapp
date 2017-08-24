@@ -5,15 +5,14 @@ window.addEventListener('load', function() {
             backTopEle = document.getElementById('back-top'),
             packBackTop = new Pack(backTopEle);
 
-        packBackTop.transfrom('back-top--hidden').base('js-hidden');
+        packBackTop.transfrom('back-top--hidden').base('js-hidden').lastStart();
 
         function toggleBackTop() {
             var 
                 scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop,
-                clientHeight = document.documentElement.clientHeight,
                 isHidden = backTopEle.classList.contains('back-top--hidden');
 
-            if ((scrollTop > clientHeight && isHidden) || (scrollTop < clientHeight && !isHidden)) {
+            if ((scrollTop > 350 && isHidden) || (scrollTop < 350 && !isHidden)) {
                 packBackTop.toggle();
             }
         }
