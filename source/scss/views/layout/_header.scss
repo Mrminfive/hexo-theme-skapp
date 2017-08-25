@@ -3,6 +3,13 @@ $nav-height: 60px       !default;
 
 body {
     @media screen and (max-width: $mq-mobile) {
+        .page__header--small {
+            .nav__list {
+                background: $main-color;
+                background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
+            }
+        }
+
         .page__menu-btn {
             display: inline-block;
         }
@@ -75,11 +82,6 @@ body {
 
         .page__logo {
             margin: 0;
-        }
-
-        .nav__list {
-            background: $main-color;
-            background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
         }
     }
 }
