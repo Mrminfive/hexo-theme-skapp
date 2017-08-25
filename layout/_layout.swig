@@ -5,7 +5,7 @@
     {% block title %}
         <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.subtitle|default(theme.subtitle) }}</title>
     {% endblock %}
-    
+
     {% include './_partial/common/head.swig' %}
     
     {% block pageCss %}
@@ -16,7 +16,7 @@
         {% include './_partial/common/loader.swig' %}
     {% endblock %}
 
-    <div id="page" class="page js-hidden">
+    <div id="page" class="page js-hidden" style="height: 2000px;">
         {% block header %}
             {% include './_partial/common/header.swig' %}
         {% endblock %}
@@ -37,8 +37,9 @@
         <script type="text/javascript" src="js/common/utils.js"></script>
         <script type="text/javascript" src="js/common/pack.js"></script>
         <script type="text/javascript" src="js/common/animation.js"></script>
-        <script type="text/javascript" src="js/layout/back-top.js"></script>
         <script type="text/javascript" src="js/layout/loading.js"></script>
+        <script type="text/javascript" src="js/layout/header.js"></script>
+        <script type="text/javascript" src="js/layout/back-top.js"></script>
     <!-- endbuild -->
 
     {% block pagejs %}

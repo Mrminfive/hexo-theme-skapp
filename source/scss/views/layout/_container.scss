@@ -1,19 +1,19 @@
 body {
-    @media screen and (min-width: $mq-desktop--wide) {
+    @media screen and (min-width: $mq-mobile) {
         .page__container {
-            width: $mq-desktop--wide - 30px;
+            width: 100%;
         }
     }
 
     @media screen and (min-width: $mq-desktop) {
         .page__container {
-            width: $mq-desktop - 30px;
+            width: $mq-desktop;
         }
     }
 
-    @media screen and (min-width: $mq-mobile) {
+    @media screen and (min-width: $mq-desktop--wide) {
         .page__container {
-            width: calc(100% - 30px);
+            width: $mq-desktop--wide;
         }
     }
 }
@@ -29,5 +29,6 @@ body {
     flex: 1;
     position: relative;
     width: 100%;
+    padding: 0 $pad;
     margin: 0 auto;
 }

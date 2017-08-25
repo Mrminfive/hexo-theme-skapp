@@ -7,3 +7,13 @@
         clear: both;
     }
 }
+
+@mixin link($color, $dct: none) {
+    font-size: inherit;
+    text-decoration: $dct;
+    transition: color $transition;
+
+    &:hover {
+        color: $color;
+    }
+}

@@ -70,9 +70,10 @@
 
         toggle: function() {
             if (this.status) return;
-            this.status = false;
 
-            this.index === 0 || this.index === this.record.length && (this.status = true);
+            if (this.index === 0 || this.index === this.record.length - 1) {
+                this.status = true;
+            }
 
             this._toggle();
         },

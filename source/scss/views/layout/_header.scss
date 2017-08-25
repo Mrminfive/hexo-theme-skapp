@@ -1,0 +1,191 @@
+$header-height: 350px   !default;
+$nav-height: 60px       !default;
+
+body {
+    @media screen and (max-width: $mq-mobile) {
+        .page__menu-btn {
+            display: inline-block;
+        }
+
+        .page__navbar {
+            height: $nav-height;
+        }
+
+        .page__nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            transform-origin: top;
+            transform: translateY(-20%) scaleY(.8);
+            opacity: 0;
+            z-index: -1;
+            display: none;
+
+            &--open {
+                transform: translateY(0) scaleY(1);
+                opacity: 1;
+            }
+
+            .nav__list {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 0 $pad;
+            }
+
+            .nav__item {
+                float: none;
+                text-align: right;
+                margin-top: 10px;
+
+                & > a {
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        .page__logo {
+            margin: 0;
+        }
+    }
+}
+
+.page__header {
+    display: block;
+    position: relative;
+    height: $header-height;
+    background: center no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(64, 84, 90, 0.8);
+    }
+
+    &--small {
+        .page__navbar {
+            height: $nav-height;
+            background: $main-color;
+            background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
+        }
+
+        .page__logo {
+            margin: 0;
+        }
+
+        .nav__list {
+            background: $main-color;
+            background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
+        }
+    }
+}
+
+.page__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    height: $nav-height + $pad * 2;
+    transition: height $transition;
+    z-index: $z-index--top;
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.page__logo {
+    display: block;
+    width: $nav-height;
+    height: $nav-height;
+    line-height: $nav-height;
+    margin: $pad 0;
+    text-align: center;
+    transition: margin $transition;
+
+    & > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.page__nav {
+    font-size: $main-fs - 2px;
+    transition: transform $transition, opacity $transition;
+
+    .nav__list {
+        margin: 0;
+        padding: 0;
+        border-color: transparent;
+        transition: border-color $transition;
+    }
+
+    .nav__item {
+        float: left;
+        list-style: none;
+
+        & > a {
+            display: block;
+            height: $nav-height;
+            line-height: $nav-height;
+            padding: 0 $pad;
+            @include link(darken($main-color, 20%));
+            color: #fff;
+        }
+    }
+}
+
+.page__info {
+    position: absolute;
+    left: 0;
+    top: calc(50% + #{($nav-height + $pad * 2) / 2});
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    .info__title {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .info__hr {
+        margin: 20px auto;
+        height: 2px;
+        width: 160px;
+        border: 0;
+        color: $main-color;
+        background: $main-color;
+        background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
+    }
+
+    .info__desc {
+        font-size: $main-fs - 2px;
+    }
+}
+
+.page__menu-btn {
+    display: none;
+    @include link(darken($main-color, 20%));
+    border: 0;
+    background: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    font-size: 28px;
+
+    & > i {
+        display: block;
+    }
+}

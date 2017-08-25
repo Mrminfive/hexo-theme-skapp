@@ -1,10 +1,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <meta name="format-detection" content="telephone=no">
-<meta name="author" content="{{ config.author|default(theme.author) }}" />
+<meta name="author" content="{{ get_setting('author') }}" />
 <meta name="designer" content="minfive" />
-<meta name="keywords" content="{{ config.keywords|default(theme.keywords) }}"/>
-<meta name="description" content="{{ config.description|default(theme.description) }}" />
+<meta name="keywords" content="{{ get_setting('keywords') }}"/>
+<meta name="description" content="{{ get_setting('description') }}" />
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />

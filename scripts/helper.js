@@ -140,3 +140,7 @@ hexo.extend.helper.register('num_toArray', function(num) {
     
     return ret;
 });
+
+hexo.extend.helper.register('get_setting', function(key) {
+    return this.config[key] || this.theme[key];
+});

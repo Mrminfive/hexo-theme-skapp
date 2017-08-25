@@ -10,13 +10,15 @@ $path: '../../fonts/';
 
 .iconfont {
   font-family:"iconfont" !important;
-  font-size:16px;
-  font-style:normal;
+  font-size: inherit;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-enter:before { content: "\e608"; }
+
+.icon-menu:before { content: "\e6c1"; }
 
 .icon-eye:before { content: "\e6c0"; }
 

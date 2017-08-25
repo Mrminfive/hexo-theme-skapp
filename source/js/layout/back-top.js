@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
         function toggleBackTop() {
             var 
                 scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop,
-                isHidden = backTopEle.classList.contains('back-top--hidden');
+                isHidden = backTopEle.classList.contains('back-top--hidden') && backTopEle.classList.contains('js-hidden');
 
             if ((scrollTop > 350 && isHidden) || (scrollTop < 350 && !isHidden)) {
                 packBackTop.toggle();
