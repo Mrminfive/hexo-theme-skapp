@@ -3,11 +3,20 @@ body {
         .page__container {
             width: 100%;
         }
+
+        .page__main {
+            padding-top: 60px;
+        }
     }
 
     @media screen and (min-width: $mq-desktop) {
         .page__container {
             width: $mq-desktop;
+        }
+
+        .page__sidebar {
+            width: 25%;
+            padding: 0 $pad;
         }
     }
 
@@ -31,4 +40,18 @@ body {
     width: 100%;
     padding: 0 $pad;
     margin: 0 auto;
+}
+
+.page__main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.page__content {
+    flex: 1;
+}
+
+.page__sidebar {
+    width: 100%;
 }
