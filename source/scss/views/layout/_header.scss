@@ -178,7 +178,6 @@ body {
 
 .page__menu-btn {
     display: none;
-    @include link(darken($main-color, 20%));
     border: 0;
     background: none;
     outline: none;

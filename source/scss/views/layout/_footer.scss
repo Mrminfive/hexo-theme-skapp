@@ -1,0 +1,56 @@
+body {
+    @media screen and (max-width: $mq-desktop) {
+        .footer__bottom {
+            padding: 30px 0;
+        }
+        .footer__container {
+            flex-direction: column;
+        }
+        .footer__copyright {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.page__footer {
+
+}
+
+.footer__bottom {
+    display: block;
+    background-color: $bgc--footer;
+    color: #fff;
+    padding: 10px 0;
+
+    a {
+        @include link($main-color);
+        color: #fff;
+    }
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    margin: 0;
+    font-size: $main-fs - 2px;
+    text-align: center;
+}
+
+.footer__social-network {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: $main-fs + 8px;
+
+    .social-network__item {
+        float: left;
+
+        & + .social-network__item {
+            margin-left: 15px;
+        }
+    }
+}

@@ -11,12 +11,12 @@
     {% block pageCss %}
     {% endblock %}
 </head>
-<body>
+<body ontouchstart>
     {% block loader %}
         {% include './_partial/common/loader.swig' %}
     {% endblock %}
 
-    <div id="page" class="page js-hidden" style="height: 2000px;">
+    <div id="page" class="page js-hidden">
         {% block header %}
             {% include './_partial/common/header.swig' %}
         {% endblock %}

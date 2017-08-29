@@ -1,11 +1,12 @@
 body {
     @media screen and (min-width: $mq-mobile) {
         .page__container {
-            width: 100%;
+            width: $mq-mobile;
         }
 
         .page__main {
             padding-top: 60px;
+            padding-bottom: 60px;
         }
     }
 
@@ -46,6 +47,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .page__content {
