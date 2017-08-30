@@ -13,3 +13,8 @@ aside:
   tag: 文章标签
   latest_post: 最新文章
   firend_link: 友情链接
+
+footer:
+  about: 关于
+  firend_link: 友情链接
+  build_tools: 构建工具

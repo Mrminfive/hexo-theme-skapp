@@ -13,12 +13,23 @@ body {
 }
 
 .page__footer {
+    
+}
 
+.footer__top {
+    padding: 30px 0;
+    background-color: $bgc--footer;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    color: #fff;
+
+    .footer__container {
+        align-items: flex-start;
+    }
 }
 
 .footer__bottom {
     display: block;
-    background-color: $bgc--footer;
+    background-color: $bgc--bottom;
     color: #fff;
     padding: 10px 0;
 
@@ -32,6 +43,86 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-top__item {
+    flex: 1;
+    width: 100%;
+    padding: 0 $pad $pad;
+
+    &--2 {
+        @extend .footer-top__item;
+        flex: 2;
+    }
+
+    .item__title {
+        color: #a4b1bf;
+        font-size: $main-fs + 4px;
+        margin: 30px 0;
+        text-transform: capitalize;
+    }
+
+    .item__content {
+        
+    }
+}
+
+.footer-top__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .list-item {
+        & + .list-item {
+            margin-top: 12px;
+        }
+        
+        & > a {
+            @include link($main-color);
+            color: #fff;
+        }
+    }
+}
+
+.footer__contact-info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1;
+
+    .contact-info__item {
+        color: #69747a;
+        font-size: $main-fs - 2px;
+
+        & + .contact-info__item {
+            margin-top: 10px;
+        }
+
+        i {
+            font-size: 28px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+    }
+}
+
+.footer__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+
+    & > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 160px;
+        margin-top: 30px;
+    }
 }
 
 .footer__copyright {
@@ -48,6 +139,10 @@ body {
 
     .social-network__item {
         float: left;
+        transition: transform $transition;
+        &:hover {
+            transform: rotate(360deg);
+        }
 
         & + .social-network__item {
             margin-left: 15px;

@@ -13,3 +13,8 @@ aside:
   tag: Tags
   latest_post: Latest Post
   firend_link: Firend Link
+
+footer:
+  about: About
+  firend_link: Firend Link
+  build_tools: Build Tools

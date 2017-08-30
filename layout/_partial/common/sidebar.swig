@@ -1,9 +1,9 @@
 <aside class="page__sidebar">
-    {% if get_setting('qrcode', 'avatar') %}
+    <!-- {% if get_setting('qrcode', 'avatar') %}
         <div class="sidebar__img">
             <img src="{{ get_setting('qrcode', 'avatar') }}" alt="{{ get_setting('title') }}" title="{{ get_setting('title') }}">
         </div>
-    {% endif %}
+    {% endif %} -->
 
     <form id="page-search-from" class="page__search-from" action="/search/">
         <label class="search-form__item">
@@ -34,7 +34,7 @@
         {{ tags({ order: -1 }) }}
     </div>
 
-    <div class="sidebar__block">
+    <!-- <div class="sidebar__block">
         <h3 class="block__title">{{ __('aside.firend_link') }}</h3>
         <ul class="block-list">
             {% for item in site.data.link %}
@@ -43,5 +43,5 @@
                 </li>
             {% endfor %}
         </ul>
-    </div>
+    </div> -->
 </aside>
