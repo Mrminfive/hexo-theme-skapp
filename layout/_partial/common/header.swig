@@ -1,3 +1,4 @@
+<!-- 页头 -->
 <header id="page-header" class="page__header" style="background-image: url('{{ get_setting('header_cover') }}');">
     <nav class="page__navbar">
         <div class="page__container navbar-container">

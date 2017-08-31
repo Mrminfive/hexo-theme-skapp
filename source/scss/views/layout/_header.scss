@@ -120,7 +120,6 @@ body {
 }
 
 .page__nav {
-    font-size: $main-fs - 2px;
     transition: transform $transition, opacity $transition;
 
     .nav__list {
@@ -172,7 +171,7 @@ body {
     }
 
     .info__desc {
-        font-size: $main-fs - 2px;
+        font-size: $main-fs;
     }
 }
 

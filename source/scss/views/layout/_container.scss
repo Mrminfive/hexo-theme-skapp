@@ -1,7 +1,7 @@
 body {
     @media screen and (min-width: $mq-mobile) {
         .page__container {
-            width: $mq-mobile;
+            width: $mq-mobile - 30px;
         }
 
         .page__main {
@@ -12,18 +12,18 @@ body {
 
     @media screen and (min-width: $mq-desktop) {
         .page__container {
-            width: $mq-desktop;
+            width: $mq-desktop - 30px;
         }
 
         .page__sidebar {
-            width: 25%;
-            padding: 0 $pad;
+            width: 260px;
+            margin-top: 0;
         }
     }
 
     @media screen and (min-width: $mq-desktop--wide) {
         .page__container {
-            width: $mq-desktop--wide;
+            width: $mq-desktop--wide - 30px;
         }
     }
 }
@@ -39,8 +39,8 @@ body {
     flex: 1;
     position: relative;
     width: 100%;
-    padding: 0 $pad;
     margin: 0 auto;
+    padding: 0 $pad;
 }
 
 .page__main {
@@ -52,8 +52,10 @@ body {
 
 .page__content {
     flex: 1;
+    width: 100%;
 }
 
 .page__sidebar {
     width: 100%;
+    margin-top: 4 * $pad;
 }

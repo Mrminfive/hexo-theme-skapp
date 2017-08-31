@@ -1,0 +1,34 @@
+@import '../../theme';
+@import '../../base/mixins';
+@import '../layout/mini-post';
+
+body {
+    @media screen and (min-width: $mq-desktop) {
+        .page__posts {
+            margin-top: -2 * $pad;
+            margin-right: -2 * $pad;
+        }
+
+        .page__post {
+            width: 300px;
+        }
+    }
+
+    @media screen and (min-width: $mq-desktop--wide) {
+        .page__post {
+            width: 290px;
+        }
+    }
+}
+
+.page__posts {
+    margin-top: -2 * $pad;
+    margin-right: 0;
+}
+
+.page__post {
+    float: left;
+    width: 100%;
+    margin-top: 2 * $pad;
+    margin-right: 2 * $pad;
+}

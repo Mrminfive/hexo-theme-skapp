@@ -1,3 +1,4 @@
+<!-- 页脚 -->
 <footer class="page__footer">
     <section class="footer__top">
         <div class="page__container footer__container">

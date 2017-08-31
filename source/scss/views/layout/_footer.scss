@@ -135,7 +135,8 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: $main-fs + 8px;
+    font-size: $main-fs + 10px;
+    line-height: 1.2;
 
     .social-network__item {
         float: left;
