@@ -165,7 +165,6 @@ hexo.extend.helper.register('latest_post', function(len = 4) {
     const getTime = date => (new Date(this.date_xml(date))).getTime();
 
     let posts = this.site.posts.data
-        .filter(post => !post.draft)
         .sort((first, next) => getTime(next.date) - getTime(first.date))
         .slice(0, len);
 
@@ -187,5 +186,74 @@ hexo.extend.helper.register('latest_post', function(len = 4) {
                 `;
             }, '') }
         </ul>
+    `;
+});
+
+hexo.extend.helper.register('s_paginator', function(size = 2) {
+    let page = this.page;
+    let url_for = this.url_for;
+    let _p = this._p;
+    let items = [];
+
+    let current = page.current;
+
+    function renderItem({ str, link, title }) {
+        return `
+            <li class="paginator__item">
+                <a href="${link}" ${title ? `title="${title}"` : ''}>${str}</a>
+            </li>
+        `;
+    }
+
+    function renderCurrent({ str }) {
+        return `
+            <li class="paginator__item">
+                <span>${str}</span>
+            </li>
+        `;
+    }
+
+    for(let i = 1; i <= page.total; i++) {
+        if (i === current) {
+            items.push(renderCurrent({ str: i }));
+        } else {
+            items.push(renderItem({
+                str: i,
+                link: url_for(i === 1 ? '' : `page/${i}`)
+            }));
+        }
+    }
+
+    if (current - 1 > size) {
+        items.splice(1, current - size - 1, renderCurrent({ str: '...' }));
+    }
+
+    if (page.total - current > size) {
+        let len = page.total - current - size;
+        items.splice(items.length - len - 1, len, renderCurrent({ str: '...' }));
+    }
+
+    if (current !== 1) {
+        items.unshift(renderItem({
+            str: '<i class="iconfont icon-prev"></i>',
+            link: url_for(page.prev_link),
+            title: _p('paginator.prev')
+        }));
+    }
+
+    if (current !== page.total) {
+        items.push(renderItem({
+            str: '<i class="iconfont icon-next"></i>',
+            link: url_for(page.next_link),
+            title: _p('paginator.next')
+        }));
+    }
+
+    return `
+        <nav class="page__paginator">
+            <ul class="paginator__list clearfix">
+                ${ items.join('') }
+            </ul>
+        </nav>
     `;
 });

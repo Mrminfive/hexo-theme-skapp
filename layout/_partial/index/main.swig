@@ -2,13 +2,13 @@
     <div class="page__content">
         <div class="page__posts clearfix">
             {% for post in page.posts %}
-                {% if not post.draft %}
-                    <div class="page__post">
-                        {% include '../post/mini.swig' with { post: post } %}
-                    </div>
-                {% endif %}
+                <div class="page__post">
+                    {% include '../post/mini.swig' with { post: post } %}
+                </div>
             {% endfor %}
         </div>
+        
+        {{ s_paginator(2) }}
     </div>
 
     {% include '../common/sidebar.swig' %}

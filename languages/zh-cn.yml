@@ -18,3 +18,7 @@ footer:
   about: 关于
   firend_link: 友情链接
   build_tools: 构建工具
+
+paginator:
+  next: 下一页
+  prev: 上一页

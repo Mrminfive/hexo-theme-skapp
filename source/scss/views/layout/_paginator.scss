@@ -1,0 +1,48 @@
+$paginator-height: 32px !default;
+
+@mixin item($bgc) {
+    display: block;
+    height: $paginator-height;
+    width: $paginator-height;
+    text-align: center;
+    line-height: $paginator-height;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $bgc;
+    color: #40545a;
+    text-decoration: none;
+}
+
+.page__paginator {
+    margin-top: 3 * $pad;
+    line-height: 1;
+    text-align: center;
+}
+
+.paginator__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.paginator__item {
+    float: left;
+    
+    & + & {
+        margin-left: 5px;
+    }
+
+    & > a {
+        @include item(#d8e5f3);
+        transition: background $transition;
+
+        &:hover {
+            background-color: darken(#d8e5f3, 20%);
+        }
+    }
+
+    & > span {
+        @include item(transparent);
+    }
+}

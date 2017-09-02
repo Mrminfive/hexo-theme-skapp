@@ -33,7 +33,7 @@
         {% endblock %}
     </div>
 
-    <!-- build:js js/common.js -->
+    <!-- build:js /js/common.js -->
         <script type="text/javascript" src="js/common/utils.js"></script>
         <script type="text/javascript" src="js/common/pack.js"></script>
         <script type="text/javascript" src="js/common/animation.js"></script>

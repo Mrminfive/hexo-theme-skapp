@@ -7,10 +7,10 @@
             <img itemprop="image" src="{{ post.cover }}" alt="{{ post.title }}"/>
         {% endif %}
         <div itemprop="datePublished" content="{{ data_xml(post.date || post.update) }}" class="mini-article__date">
-            <span class="date__day">{{ date(post.date || post.update, 'Do') }}</span>
+            <span class="date__day">{{ date(post.date || post.update, 'D') }}</span>
             <span class="date__month">{{ date(post.date || post.update, 'MMMM') }}</span>
         </div>
-        <a itemprop="url" class="iconfont icon-enter" href="url_for(post.path)"></a>
+        <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}"></a>
     </div>
     <div class="mini-article__info">
         <h3 itemprop="name" class="mini-article__title">
@@ -19,7 +19,7 @@
         <p class="mini-article__author">by 
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <a itemprop="url" href="{{ post.author.link }}" target="_blank">
-                    <span itemprop="name">{{ post.author.nick }}</span>
+                    <span itemprop="name">{{ titlecase(post.author.nick) }}</span>
                 </a>
             </span>
         </p>

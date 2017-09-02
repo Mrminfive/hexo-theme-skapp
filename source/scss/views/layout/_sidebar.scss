@@ -1,4 +1,4 @@
-$item-height: 46px      !default;
+$item-height: 44px      !default;
 $margin: 30px           !default;
 $title-falg-w: 4px      !default;
 
@@ -66,7 +66,7 @@ $title-falg-w: 4px      !default;
     .block__title {
         position: relative;
         color: $title-fc;
-        font-size: $main-fs + 4px;
+        font-size: $main-fs + 2px;
         padding-left: 20px - $title-falg-w;
         margin: $margin auto $margin - 10px;
         font-weight: 400;
