@@ -10,7 +10,12 @@
 
     Pack.prototype = {
         _toggleClass: function(className, next) {
-            this.ele.classList.toggle(className);
+            var self = this;
+            classArr = className.split(' ');
+
+            classArr.forEach(function(cls) {
+                self.ele.classList.toggle(cls);
+            });
 
             next && setTimeout(next);
         },

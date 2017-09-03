@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
             headerEle.classList[ scrollTop > 30 ? 'add' : 'remove' ]('page__header--small');
         }
 
-        document.addEventListener('scroll', toggleNavStyle);
+        headerEle && document.addEventListener('scroll', toggleNavStyle);
     })();
     
     (function() {

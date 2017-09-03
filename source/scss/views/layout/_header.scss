@@ -86,6 +86,10 @@ body {
     }
 }
 
+.page__small-header {
+    height: $nav-height - 20px;
+}
+
 .page__navbar {
     position: fixed;
     top: 0;

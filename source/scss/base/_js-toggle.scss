@@ -5,3 +5,17 @@
 .js-hidden {
     display: none !important;
 }
+
+.js-transition-ease-out {
+    transition: all 1s ease-out !important;
+}
+
+.js-ease-out-enter {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.js-ease-out-leave {
+    transform: translateY(30%);
+    opacity: 0;
+}

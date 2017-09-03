@@ -2,6 +2,7 @@
 
 const
     Path = require('path'),
+    Util = require('util'),
     _ = require('lodash');
 
 const 
@@ -194,6 +195,7 @@ hexo.extend.helper.register('s_paginator', function(size = 2) {
     let url_for = this.url_for;
     let _p = this._p;
     let items = [];
+    let link = `${page.base}${this.config.pagination_dir}/%d/`
 
     let current = page.current;
 
@@ -219,7 +221,7 @@ hexo.extend.helper.register('s_paginator', function(size = 2) {
         } else {
             items.push(renderItem({
                 str: i,
-                link: url_for(i === 1 ? '' : `page/${i}`)
+                link: url_for(i === 1 ? '' : Util.format(link, i))
             }));
         }
     }

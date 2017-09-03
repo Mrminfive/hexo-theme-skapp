@@ -40,6 +40,7 @@
         <script type="text/javascript" src="js/layout/loading.js"></script>
         <script type="text/javascript" src="js/layout/header.js"></script>
         <script type="text/javascript" src="js/layout/back-top.js"></script>
+        <script type="text/javascript" src="js/layout/post.js"></script>
     <!-- endbuild -->
 
     {% block pagejs %}
