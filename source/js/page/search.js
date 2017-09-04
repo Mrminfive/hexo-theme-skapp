@@ -42,7 +42,7 @@
                                 '</span>',
                             '</p>',
                             '<p itemprop="articleSection" class="min-article__desc">',
-                                '{{ subtitle }}',
+                                '{{ desc }}',
                             '</p>',
                             '<div class="min-article__tags">',
                                 '<i class="iconfont icon-tab"></i>',
@@ -114,7 +114,8 @@
 
             if (filteredData.length) {
                 this.filteredData = this.filteredData.map(function(item) {
-                    item.tagsHtml = self.compileTemplate(self.tagsTpl, item.tags);
+                    console.log(item.tagArr);
+                    item.tagsHtml = self.compileTemplate(self.tagsTpl, item.tagArr);
 
                     return item;
                 });

@@ -58,6 +58,7 @@ hexo.extend.generator.register('lunr', function(locals){
         searchIdx,
         store = {},
         tags,
+        tagArr,
         cates,
         bodyText;
 
@@ -73,9 +74,14 @@ hexo.extend.generator.register('lunr', function(locals){
         res[yearKey].forEach(function(post){
             tags = [];
             cates = [];
+            tagArr = [];
             if (post.tags) {
                 post.tags.each(function(tag){
-                    tags.push(tag.name);  
+                    tags.push(tag.name);
+                    tagArr.push({
+                        name: tag.name,
+                        path: config.root + tag.path
+                    });
                 });    
             }
             if (post.categories) {
@@ -92,19 +98,32 @@ hexo.extend.generator.register('lunr', function(locals){
                 cates: cates.join(','),
                 href: post.permalink
             });
-            
+
             store[post.permalink] = {
                 url: post.permalink,
                 title: post.title,
                 tags: tags,
+                tagArr: tagArr,
                 cates: cates,
                 cover: post.cover || hexo.config.default_cover || hexo.theme.default_cover,
                 desc: post.subtitle || post.excerpt || "",
                 date: moment(post.date).locale('zh-cn').format(),
                 day: moment(post.date).locale('zh-cn').format('D'),
                 month: moment(post.date).locale('zh-cn').format('MMMM'),
-                authorLink: post.author.link,
-                authorNick: post.author.nick
+                authorLink: post.author 
+                    && post.author.link 
+                    || hexo.config.author
+                    && hexo.config.author.link
+                    || hexo.theme.author
+                    && hexo.theme.author.link
+                    || '/',
+                authorNick: post.author
+                    && post.author.nick
+                    || hexo.config.author
+                    && hexo.config.author.name
+                    || hexo.theme.author
+                    && hexo.theme.author.name
+                    || 'unknow'
             };
         });
         finalData.push({
