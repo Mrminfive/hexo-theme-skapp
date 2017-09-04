@@ -1,0 +1,33 @@
+@import './index';
+
+.search__loader {
+    position: relative;
+    color: $main-color;
+    height: 100px;
+    font-size: 24px;
+
+    @keyframes loader {
+        from { transform: translate(-50%, -50%) rotate(0) },
+        to { transform: translate(-50%, -50%) rotate(360deg) }
+    }
+
+    & > i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: loader 1s linear infinite;
+    }
+}
+
+.search__result-wrap {
+    line-height: 1.4;
+    color: $title-fc;
+    font-size: $main-fs + 2px;
+    font-weight: 400;
+    margin-top: 0;
+
+    & > em {
+        color: $main-color;
+        margin: 0 5px;
+    }
+}

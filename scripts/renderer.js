@@ -98,9 +98,13 @@ hexo.extend.generator.register('lunr', function(locals){
                 title: post.title,
                 tags: tags,
                 cates: cates,
-                cover: post.cover || hexo.config.default_cover,
+                cover: post.cover || hexo.config.default_cover || hexo.theme.default_cover,
                 desc: post.subtitle || post.excerpt || "",
-                date: moment(post.date).locale('zh-cn').format('ll')
+                date: moment(post.date).locale('zh-cn').format(),
+                day: moment(post.date).locale('zh-cn').format('D'),
+                month: moment(post.date).locale('zh-cn').format('MMMM'),
+                authorLink: post.author.link,
+                authorNick: post.author.nick
             };
         });
         finalData.push({

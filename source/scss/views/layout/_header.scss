@@ -83,6 +83,10 @@ body {
         .page__logo {
             margin: 0;
         }
+
+        .page__nav .nav__item a:hover {
+            color: darken($main-color, 20%);
+        }
     }
 }
 
@@ -142,7 +146,7 @@ body {
             height: $nav-height;
             line-height: $nav-height;
             padding: 0 $pad;
-            @include link(darken($main-color, 20%));
+            @include link($main-color);
             color: #fff;
         }
     }
