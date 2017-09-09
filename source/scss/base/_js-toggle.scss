@@ -6,16 +6,16 @@
     display: none !important;
 }
 
-.js-transition-ease-out {
-    transition: all 1s ease-out !important;
+.js-ease-out-leave {
+    transition: transform 1s ease-out, opacity 1s ease-out !important;
 }
 
-.js-ease-out-enter {
+.js-ease-out-enter-active {
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
 
-.js-ease-out-leave {
+.js-ease-out-leave-active {
     transform: translateY(30%);
     opacity: 0;
 }

@@ -30,11 +30,11 @@ window.addEventListener('load', function() {
             var pack = new Pack(post);
 
             pack
+                .base('js-ease-out-leave-active')
                 .base('js-ease-out-leave')
-                .base('js-transition-ease-out')
-                .transfrom('js-ease-out-enter')
+                .transfrom('js-ease-out-enter-active')
                 .end(function() {
-                    var arr = ['js-transition-ease-out', 'js-ease-out-leave', 'js-ease-out-enter'];
+                    var arr = ['js-ease-out-enter', 'js-ease-out-enter-active', 'js-ease-out-leave', 'js-ease-out-leave-active'];
 
                     arr.forEach(function(item) {
                         post.classList.remove(item);

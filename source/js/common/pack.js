@@ -17,16 +17,17 @@
                 self.ele.classList.toggle(cls);
             });
 
-            next && setTimeout(next);
+            next && setTimeout(next, 10);
         },
 
         _transfromClass: function(className, next) {
             var self = this;
 
-            this.ele.addEventListener('transitionend', function fun() {
-                next();
-
-                self.ele.removeEventListener('transitionend', fun);
+            this.ele.addEventListener('transitionend', function fun(event) {
+                if (self.ele === event.target) {
+                    next();
+                    self.ele.removeEventListener('transitionend', fun);
+                }
             })
 
             this._toggleClass(className);
