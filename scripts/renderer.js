@@ -96,11 +96,11 @@ hexo.extend.generator.register('lunr', function(locals){
                 body: bodyText || "",
                 tags: tags.join(','),
                 cates: cates.join(','),
-                href: post.permalink
+                href: '/' + post.path
             });
 
-            store[post.permalink] = {
-                url: post.permalink,
+            store['/' + post.path] = {
+                url: '/' + post.path,
                 title: post.title,
                 tags: tags,
                 tagArr: tagArr,

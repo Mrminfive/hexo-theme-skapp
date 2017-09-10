@@ -114,7 +114,6 @@
 
             if (filteredData.length) {
                 this.filteredData = this.filteredData.map(function(item) {
-                    console.log(item.tagArr);
                     item.tagsHtml = self.compileTemplate(self.tagsTpl, item.tagArr);
 
                     return item;
