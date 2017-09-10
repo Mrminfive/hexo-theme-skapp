@@ -16,12 +16,14 @@ window.addEventListener('load', function() {
             btn = document.querySelector('button.page__menu-btn'),
             menu = document.querySelector('nav.page__nav');
 
-        var packMenu = new Pack(menu);
+        if (btn && menu) {
+            var packMenu = new Pack(menu);
 
-        packMenu.base('js-open').transfrom('page__nav--open');
+            packMenu.base('js-open').transfrom('page__nav--open');
 
-        btn.addEventListener('click', function() {
-            packMenu.toggle();
-        });
+            btn.addEventListener('click', function() {
+                packMenu.toggle();
+            });
+        }
     })();
 });
