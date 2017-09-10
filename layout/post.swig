@@ -17,5 +17,6 @@
 {% endblock %}
 
 {% block other %}
+    {% include './_partial/post/comment.swig' %}
     {% include './_partial/post/post-statistical.swig' %}
 {% endblock %}

@@ -100,6 +100,7 @@
 
         end: function(fun) {
             this.end = fun;
+            return this;
         }
     }
 

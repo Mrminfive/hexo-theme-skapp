@@ -9,6 +9,10 @@ body {
     }
 }
 
+.page__content {
+    overflow: hidden;
+}
+
 .post__cover {
     width: 100%;
 
@@ -19,7 +23,7 @@ body {
 }
 
 .post__info {
-    padding: $pad * 4 0;
+    margin: $pad * 4 0;
 }
 
 .post__title {
@@ -39,11 +43,10 @@ body {
 .mark__block {
     display: flex;
     align-items: center;
-    font-size: 16px;
     margin-right: 15px;
 
     .mark__icon {
-        font-size: 22px;
+        font-size: 18px;
         margin-right: 5px;
     }
 
@@ -55,12 +58,16 @@ body {
 
     .mark__item {
         float: left;
-        color: $title-fc;
         margin-right: 5px;
+
+        & > span {
+            vertical-align: middle;
+        }
 
         & > a {
             @include link($main-color);
-            color: $title-fc;
+            color: $main-fc;
+            vertical-align: middle;
         }
 
         &:not(:last-child)::after {
@@ -71,6 +78,9 @@ body {
 }
 
 .post__content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
     h1 {
         font-size: 2em;
     }
@@ -135,6 +145,7 @@ body {
 
     a {
         color: $main-color;
+        transition: color .3s;
         text-decoration: none;
 
         &:hover,
@@ -149,6 +160,7 @@ body {
         margin: $main-fs * 1.5 0;
         color: #fff;
         padding: .5em;
+        -webkit-overflow-scrolling: touch;
         overflow: auto;
 
         & + & {
@@ -156,6 +168,21 @@ body {
 
             &:last-child {
                 margin-bottom: $main-fs * 1.5;
+            }
+        }
+
+        table {
+            width: auto;
+            margin: 0;
+            border: 0;
+
+            tr {
+                td,
+                th {
+                    border: 0;
+                    padding: 0;
+                    background-color: transparent !important;
+                }
             }
         }
 
@@ -234,6 +261,76 @@ body {
         
         &:not(:last-child) {
             margin-bottom: 10px;
+        }
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid $border-c;
+        border-collapse: collapse;
+
+        th {
+            font-weight: 700;
+        }
+
+        th,
+        td {
+            padding: .5em;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tbody > tr:nth-child(2n+1)>td {
+            background-color: rgba(102,128,153,.05);
+        }
+    }
+
+    .post-announce {
+        margin: 2em 0;
+    }
+
+    .post__prevs {
+        display: flex;
+        width: 100%;
+        font-size: 0;
+        font-weight: bold;
+        padding-top: 10px;
+        border-top: 1px dashed #ddd;
+    }
+
+    .post__prev {
+        flex: 1 0 0;
+        overflow: hidden;
+
+        & > a {
+            font-size: $main-fs;
+            display: inline-block;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: $main-fc;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color $transition;
+            text-decoration: none;
+
+            &.actived {
+                color: $main-color--hover;
+            }
+
+            &:hover,
+            &:active {
+                color: $main-color--hover;
+            }
+
+            & > i {
+                font-size: 16px;
+            }
+        }
+
+        &--right {
+            text-align: right;
         }
     }
 }
