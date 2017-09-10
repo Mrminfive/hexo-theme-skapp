@@ -45,5 +45,8 @@
 
     {% block pagejs %}
     {% endblock %}
+
+    {% block other %}
+    {% endblock %}
 </body>
 </html>

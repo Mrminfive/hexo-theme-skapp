@@ -22,3 +22,6 @@ footer:
 paginator:
   next: next
   prev: prev
+
+other: 
+  bout: bout
