@@ -25,6 +25,8 @@ window.addEventListener('load', function() {
         var posts = document.querySelectorAll('article.page__mini-article');
         
         posts.forEach(function(post) {
+            if (post.parentElement.parentElement.classList.contains('js-hidden')) return;
+
             var position = getPosition(post);
 
             var pack = new Pack(post);

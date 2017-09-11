@@ -9,7 +9,7 @@ const
     publicDir   = hexo.public_dir,
     sourceDir   = hexo.source_dir;
 
-hexo.extend.helper.register('mb_archives', function(posts) {
+hexo.extend.helper.register('blog_archives', function(posts) {
     let archives = [];
 
     const getTime = date => (new Date(this.date_xml(date))).getTime();
@@ -39,7 +39,7 @@ hexo.extend.helper.register('mb_archives', function(posts) {
     archives.forEach((archive, idx) => {
         archive.posts = archive.posts.sort((first, next) => getTime(next.date) - getTime(first.date));
     });
-
+    
     return archives;
 });
 

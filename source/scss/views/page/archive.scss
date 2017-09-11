@@ -1,0 +1,38 @@
+@import './index';
+
+.mb-main__nav {
+    width: 100%;
+    overflow: hidden;
+
+    & > ul {
+        display: flex;
+        padding: 0;
+        overflow: auto;
+    }
+
+    .nav__item {
+        list-style: none;
+        margin-bottom: .5em;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 .8em;
+        transition: color .3s, background .3s;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background-color: $main-color;
+        }
+
+        & + .nav__item {
+            margin-left: .5em;
+        }
+
+        &--selected {
+            color: #fff;
+            background-color: $main-color;
+            cursor: default;
+        }
+    }
+}
