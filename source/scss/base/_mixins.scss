@@ -17,3 +17,212 @@
         color: $color;
     }
 }
+
+@mixin post() {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-family: inherit;
+        vertical-align: baseline;
+    }
+
+    h1, h2, h3, h4, h5, h6, blockquote, p, img, ul, ol, dl {
+        margin: 0;
+        outline: none;
+        border: 0;
+
+        &:not(:last-child) {
+            margin-bottom: $main-fs * 1.5;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1;
+        font-weight: 400;
+        color: $title-fc;
+        margin-top: $main-fs * 2.5;
+    }
+
+    ul, ol, dl {
+        padding-left: 1.5em;
+    }
+
+    blockquote {
+        position: relative;
+        padding: 1.5em;
+        border-left: 5px solid #e4e4e4;
+        background-color: rgba(164,177,191,.1);
+        overflow: hidden;
+    }
+
+    a {
+        color: $main-color;
+        transition: color .3s;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            color: $main-color--hover;
+            text-decoration: underline;
+        }
+    }
+
+    .highlight {
+        background-color: #272822;
+        margin: $main-fs * 1.5 0;
+        color: #fff;
+        padding: .5em;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+
+        & + & {
+            margin: 10px 0;
+
+            &:last-child {
+                margin-bottom: $main-fs * 1.5;
+            }
+        }
+
+        table {
+            width: auto;
+            margin: 0;
+            border: 0;
+
+            tr {
+                td,
+                th {
+                    border: 0;
+                    padding: 0;
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        .line {
+            height: 22px;
+        }
+
+        .gutter {
+            pre {
+                min-width: 18px;
+                margin-right: .8em;
+                text-align: right;
+                color: #8f908a;
+            }
+        }
+
+        .code {
+            .tag {
+                .name {
+                    color: #F92672;
+                }
+                .attr {
+                    color: #74E22E;
+                }
+                .string {
+                    color: #E6DB74;
+                }
+            }
+
+            .comment {
+                color: #75715E;
+            }
+            .keyword {
+                color: #66D9EF;
+            }
+            .attr {
+                color: #E6DB74;
+            }
+            .literal,
+            .number {
+                color: #AE81FF;
+            }
+            .string {
+                color: #E6DB74;
+            }
+            .built_in {
+                color: #66D9EF;
+            }
+            .function {
+                color: #66D9EF;
+
+                .params {
+                    color: #FD9720;
+                }
+            }
+        }
+    }
+
+    code {
+        padding: 0 .4em;
+        margin: 0;
+        background-color: rgba(27,31,35,0.05);
+        border-radius: 3px;
+        font-weight: 400;
+        word-break: break-all;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #e4e4e4;
+        margin: 1.5em 0;
+    }
+
+    img {
+        max-width: 100%;
+        
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid $border-c;
+        border-collapse: collapse;
+
+        th {
+            font-weight: 700;
+        }
+
+        th,
+        td {
+            padding: .5em;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tbody > tr:nth-child(2n+1)>td {
+            background-color: rgba(102,128,153,.05);
+        }
+    }
+}

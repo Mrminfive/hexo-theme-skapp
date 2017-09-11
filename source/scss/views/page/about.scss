@@ -1,0 +1,16 @@
+@import '../../theme';
+@import '../../base/mixins';
+
+.content__container {
+    @include post();
+
+    h1, h2, h3, h4, h5, h6 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+#comment-container {
+    margin-top: $pad * 2;
+}
