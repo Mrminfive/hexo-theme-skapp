@@ -7,7 +7,7 @@
 }
 
 .js-ease-out-leave {
-    transition: transform 1s ease-out, opacity 1s ease-out !important;
+    transition: transform .5s ease-out, opacity .5s ease-out !important;
 }
 
 .js-ease-out-enter-active {
@@ -16,6 +16,36 @@
 }
 
 .js-ease-out-leave-active {
-    transform: translateY(20px);
+    transform: translateY(40px);
     opacity: 0;
+}
+
+@keyframes animations {
+    0% {
+        transform-origin: center bottom;
+        transform: translateY(-80px) scale(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform-origin: center bottom;
+        transform: translateY(-120px) scale(.25);
+        opacity: .25;
+    }
+
+    60% {
+        transform-origin: center;
+        transform: translateY(0px) scale(.6);
+        opacity: .5;
+    }
+
+    100% {
+        transform-origin: center;
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+.js-animation {
+    animation: animations 1s linear forwards;
 }

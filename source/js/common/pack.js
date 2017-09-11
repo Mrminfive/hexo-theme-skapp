@@ -28,7 +28,20 @@
                     next();
                     self.ele.removeEventListener('transitionend', fun);
                 }
-            })
+            });
+
+            this._toggleClass(className);
+        },
+
+        _animationClass: function(className, next) {
+            var self = this;
+
+            this.ele.addEventListener('animationend', function fun(event) {
+                if (self.ele === event.target) {
+                    next();
+                    self.ele.removeEventListener('animationend', fun);
+                }
+            });
 
             this._toggleClass(className);
         },
@@ -51,6 +64,9 @@
                 case 'transfrom':
                     this._transfromClass(opt.className, this._toggle.bind(this));
                     break;
+                case 'animation':
+                    this._animationClass(opt.className, this._toggle.bind(this));
+                    break;
             }
 
             this.index += this.dir;
@@ -69,6 +85,15 @@
             this.record.push({
                 className: className,
                 type: 'transfrom'
+            });
+
+            return this;
+        },
+
+        animation: function(className) {
+            this.record.push({
+                className: className,
+                type: 'animation'
             });
 
             return this;
