@@ -6,7 +6,8 @@ subtitle_desc: 日常学习与兴趣交流
 keywords: minfive, minfive blog, 前端博客, 前端, 程序员, 前端开发, 全栈开发, node.js, javascript
 description: 日常学习与兴趣交流的个人博客
 introduction: 不思量，自难忘！
-logo: http://oo12ugek5.bkt.clouddn.com/images/base-logo.png
+favicon_ico: http://oo12ugek5.bkt.clouddn.com/blog/images/favicon.ico
+logo: http://oo12ugek5.bkt.clouddn.com/images/logo-text-white.png
 qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
 header_cover: http://oo12ugek5.bkt.clouddn.com/blog/images/banner-bg.jpg
@@ -22,7 +23,7 @@ about:
 
 # Menu
 menu:
-  home: /
+  home: / 
   archive: /archives
   works: /demo
   music: /music
