@@ -54,6 +54,7 @@
                 <a href="https://github.com/Mrminfive" target="_blank">minfive</a>.
             </p>
             <ul class="footer__social-network clearfix">
+                {% if site.data.contact %}
                 {% for item in site.data.contact %}
                     <li class="social-network__item">
                         <a href="{{ item.link }}" target="_blank" title="{{ item.title }}">
@@ -61,6 +62,7 @@
                         </a>
                     </li>
                 {% endfor %}
+                {% endif %}
             </ul>
         </div>
     </section>
