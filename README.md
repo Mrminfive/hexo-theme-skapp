@@ -162,6 +162,7 @@ date: 2017-07-29 00:50:51
 type: search
 layout: search
 ---
+```
 
 404 页面则直接在 source 目录下创建 404.md 文件，文件内容如下：
 
