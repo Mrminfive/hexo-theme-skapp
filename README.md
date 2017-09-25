@@ -32,6 +32,8 @@ clone 完后将根目录下的 `_config.yml` 文件中的 `theme` 字段设置�
 npm install --save-dev hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
 ```
 
+*注意*：如果安装失败可尝试用 cnpm 进行安装。
+
 安装完依赖后将以下配置写入根目录下的 `_config.yml` 文件中
 
 ``` yml
@@ -122,10 +124,11 @@ menu:
 | home | home: / | 首页 |
 | archive | archive: /archives | 归档 |
 | about | about: /about | 关于 |
+| search | search: /search | 搜索页 | 
 
-其中 `about` 与主题内置的 `404` 页面一样需要手动创建，创建方式如下：
+其中 `about`、`search` 与主题内置的 `404` 页面一样需要手动创建，创建方式如下：
 
-创建一个页面：
+创建 about 页面：
 
 ``` shell
 hexo new page about
@@ -143,6 +146,22 @@ layout: about
 
 ...(以下内容将渲染在关于页面中)
 ```
+
+创建 search 页面：
+
+``` shell
+hexo new page search
+```
+
+然后编辑 source 文件夹下的 about 文件夹中的 index.md 文件：
+
+``` md
+---
+title: 关于
+date: 2017-07-29 00:50:51
+type: search
+layout: search
+---
 
 404 页面则直接在 source 目录下创建 404.md 文件，文件内容如下：
 
