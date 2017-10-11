@@ -37,6 +37,19 @@ npm install --save-dev hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed
 安装完依赖后将以下配置写入根目录下的 `_config.yml` 文件中
 
 ``` yml
+# Sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+# Autoprefixer
+autoprefixer:
+  exclude:
+    - '*.min.css'
+  browsers:
+    - 'last 2 versions'
+
 # Lunr
 lunr:
   field: all
