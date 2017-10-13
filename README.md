@@ -249,7 +249,7 @@ about:
 
 #### 联系方式
 
-在 `/source/_data` 目录下创建 `contact.xml` 文件将在页面底部生成相应的标签链接，如：
+在 `/source/_data` 目录下创建 `contact.yml` 文件将在页面底部生成相应的标签链接，如：
 
 ![contact-img][contact-img]
 
