@@ -1,5 +1,5 @@
 ## hexo-theme-skapp
-- [中文文档](https://github.com/Mrminfive/hexo-theme-skapp/blob/master/README-cn.md)
+- [中文文档](./README-cn.md)
 ### Project Introduction
 
 This project is a hexo theme named skapp. 
