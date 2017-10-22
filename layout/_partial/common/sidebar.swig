@@ -35,7 +35,7 @@
     </div>
 
     <!-- <div class="sidebar__block">
-        <h3 class="block__title">{{ __('aside.firend_link') }}</h3>
+        <h3 class="block__title">{{ __('aside.friend_links') }}</h3>
         <ul class="block-list">
             {% for item in site.data.link %}
                 <li class="block-list-item">
