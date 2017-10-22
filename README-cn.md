@@ -2,7 +2,7 @@
 
 ### 项目简介
 
-笔者出于强迫症，写了 skapp 这个主题，为得就是看起来顺眼点。。。哭。。。
+项目为 hexo 主题 skapp。
 
 附上预览地址： [demo][demo]
 
@@ -32,7 +32,14 @@ clone 完后将根目录下的 `_config.yml` 文件中的 `theme` 字段设置�
 npm install --save hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
 ```
 
-*注意*：如果安装失败可尝试用 cnpm 进行安装。
+**注意**：如果安装失败可尝试用 cnpm 进行安装。另外，由于使用 `nodejieba` 分词库，所以 windows 下用户应提前安装好相应编译环境。操作如下：
+
+``` shell
+npm install -g windows-build-tools
+npm install -g node-gyp
+```
+
+(确认 `PATH` 中 `python` 路径是否设置。)
 
 安装完依赖后将以下配置写入根目录下的 `_config.yml` 文件中
 
@@ -351,13 +358,24 @@ $z-index--top: 100                                  !default;
 
 #### 第三方服务
 
-##### 百度统计
+##### 统计
+
+###### 百度统计
 
 主题已集成百度统计，使用百度统计仅需要获取百度统计的脚本id并将其配置到根 `_config.yml` 中：
 
 ``` yml
 # Baidu statistic
 baidu_statistic: e3267498201dfa9699a5c509424709d6
+```
+
+###### 谷歌统计
+
+主题已集成百度统计，使用谷歌统计仅需要获取谷歌统计的脚本id并将其配置到根 `_config.yml` 中：
+
+``` yml
+# Google statistic
+google_statistic: UA-108468870-1
 ```
 
 ##### 不蒜子统计
@@ -391,6 +409,8 @@ sitemap:
 
 ##### 评论系统
 
+###### gitalk
+
 主题集成 [gitalk][gitalk] 作为评论功能。开启评论功能需要注册 Github Application，具体请参照 [gitalk文档][gitalk doc]，申请完后在根 `_config.yml` 配置：
 
 ``` yml
@@ -404,6 +424,16 @@ gitTalk:
     - ***
 ```
 
+###### disqus
+
+主题集成 [disqus][disqus] 作为评论功能。开启此评论功能请注册 Disqus 站点，具体参照官方指引，申请完成后在根 `_config.yml` 配置：
+
+``` yml
+# Disqus
+
+disqus_shortname: ***
+```
+
 [demo]: http://blog.minfive.com/
 [screenshot]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-screenshot.png
 [hexo]: https://hexo.io/zh-cn/
@@ -411,3 +441,4 @@ gitTalk:
 [gitalk doc]: https://github.com/gitalk/gitalk#usage
 [contact-img]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-contact.png
 [footer-link]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png
+[disqus]: https://disqus.com/
