@@ -6,7 +6,7 @@
             <ul>
                 {% for archive in mbArchives %}
                     <li class="nav__item {% if archive.index == 0 %}nav__item--selected{% endif %}" data-index="{{ archive.index }}">
-                        {{ archive.year }}{{ __('other.year') }}
+                        {{ archive.year }} {{ __('other.year') }}
                     </li>
                 {% endfor %}
             </ul>
