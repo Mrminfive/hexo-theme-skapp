@@ -23,6 +23,12 @@ paginator:
   next: next
   prev: prev
 
+copyright_statement:
+  one: Thanks for your reading, this article is provided by
+  two: If reproduced, please indicate the source
+  three: Thank you for reading, this article belongs to
+  four: copyright, if reproduced, please indicate the source
+
 other: 
   bout: bout
   year: year

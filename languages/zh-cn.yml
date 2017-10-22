@@ -23,6 +23,12 @@ paginator:
   next: 下一页
   prev: 上一页
 
+copyright_statement:
+  one: 感谢您的阅读，本文由
+  two: 原创提供。如若转载，请注明出处
+  three: 感谢您的阅读，本文由
+  four: 版权所有。如若转载，请注明出处
+
 other: 
   bout: 次
   year: 年
