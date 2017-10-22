@@ -290,7 +290,7 @@ about:
 配置内容如下：
 
 ```
-firend_link:
+friend_links:
   - name: hexo-theme-skapp
     desc: hexo-theme-skapp
     link: https://github.com/Mrminfive/hexo-theme-skapp
@@ -303,7 +303,7 @@ build_tools:
 
 其中 `name` 表示链接的显示值，`desc` 表示链接的 `title` 值，`link` 表示跳转的链接。
 
-该文件中的每一个数组代表一列链接，数据的key 值代表对应该列的标题，如：`firend_link` 对应 `友情链接`，同时允许设置多列链接，只需要在 `hexo-theme-skapp/languages` 下的语言配置中设置好相应的对照值即可。
+该文件中的每一个数组代表一列链接，数据的key 值代表对应该列的标题，如：`friend_links` 对应 `友情链接`，同时允许设置多列链接，只需要在 `hexo-theme-skapp/languages` 下的语言配置中设置好相应的对照值即可。
 
 
 #### 个性化配置
