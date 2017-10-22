@@ -8,7 +8,7 @@
         {% endif %}
         <div itemprop="datePublished" content="{{ data_xml(post.date || post.update) }}" class="mini-article__date">
             <span class="date__day">{{ date(post.date || post.update, 'D') }}</span>
-            <span class="date__month">{{ date(post.date || post.update, 'MMM') }}</span>
+            <span class="date__month">{{ date(post.date || post.update, config.language === 'zh-cn' ? 'MMMM' : 'MMM') }}</span>
         </div>
         <a itemprop="url" class="iconfont icon-enter" href="{{ url_for(post.path) }}"></a>
     </div>
