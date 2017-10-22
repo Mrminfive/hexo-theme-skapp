@@ -262,7 +262,7 @@ create `footer_link.yml` under the `source/_data` directory(This configuration w
 ![footer-link](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png)
 
 ``` yml
-firend_link:
+friend_links:
   - name: hexo-theme-skapp
     desc: hexo-theme-skapp
     link: https://github.com/Mrminfive/hexo-theme-skapp
@@ -273,7 +273,7 @@ build_tools:
     link: https://hexo.io/
 ```
 `name` means the link value, `desc` means the link `title` attribute value.
-Each array in this file represents a list of link(e.g. firend_link). Skapp support multi-column links(you just need to edit your language configuration in the `hexo-theme-skapp/languages`).
+Each array in this file represents a list of link(e.g. friend_links). Skapp support multi-column links(you just need to edit your language configuration in the `hexo-theme-skapp/languages`).
 
 #### personalized configuration
 skapp uses `sass` precompiled style and packages all the baisc styles in the `_theme.scss` file under the `hexo-theme-skapp/source/scss` directory:

@@ -12,11 +12,11 @@ aside:
   archive: Archives
   tag: Tags
   latest_post: Latest Post
-  firend_link: Firend Link
+  friend_links: Friend Links
 
 footer:
   about: About
-  firend_link: Firend Link
+  friend_links: Friend Links
   build_tools: Build Tools
 
 paginator:
