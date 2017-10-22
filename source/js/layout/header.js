@@ -28,8 +28,11 @@ window.addEventListener('load', function() {
     })();
 
     (function() {
-        var 
-            header = document.getElementById('page-header')
+        var header = document.getElementById('page-header');
+        
+        if (!header) return;
+
+        var
             title = header.querySelector('.info__title'),
             desc = header.querySelector('.info__desc');
 

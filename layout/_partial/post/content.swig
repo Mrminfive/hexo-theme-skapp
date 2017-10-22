@@ -50,14 +50,14 @@
 
         {% if post.editor %}
         <div class="post-announce">
-            感谢您的阅读，本文由
-            <a href="{{ post.editor.url }}">{{ post.editor.name }}</a> 原创提供。如若转载，请注明出处：{{ post.editor.name }}（<a href="{{ post.editor.url }}">{{ post.editor.url }}</a>）
+            {{ __('copyright_statement.one') }}
+            <a href="{{ post.editor.url }}">{{ post.editor.name }}</a> {{ __('copyright_statement.two') }}：{{ post.editor.name }}（<a href="{{ post.editor.url }}">{{ post.editor.url }}</a>）
         </div> 
         {% else %}
         <div class="post-announce">
-            感谢您的阅读，本文由
+            {{ __('copyright_statement.three') }}
             <a href="{{ config.url }}">{{ get_setting('title') }}</a>
-            版权所有。如若转载，请注明出处：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(post.path) }}">{{ config.url }}{{ url_for(post.path) }}</a>）
+            {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(post.path) }}">{{ config.url }}{{ url_for(post.path) }}</a>）
         </div>
 
         <div class="post__prevs">

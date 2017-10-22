@@ -1,40 +1,52 @@
 ## hexo-theme-skapp
+- [中文文档](./README-cn.md)
+### Project Introduction
 
-### 项目简介
+This project is a hexo theme named skapp. 
+[Demo](http://blog.minfive.com/)
 
-笔者出于强迫症，写了 skapp 这个主题，为得就是看起来顺眼点。。。哭。。。
+#### theme effect
+![](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-screenshot.png)
 
-附上预览地址： [demo][demo]
+#### language support
+`skapp` supports `zh-cn` and `en` by default. If you need other languages, you can extend it by yourself(to put the language yml file into the `languages` folder under the `hexo-theme-skapp` directory).
 
-#### 主题效果
-    
-![screenshot][screenshot]
+### How to use
+1. Follow the [hexo official document](https://hexo.io/) to build the basic blog.
+>  the default path of the following operations is your hexo blog project directory, please enter the project.
 
-#### 语言支持
-
-主题默认支持 `zh-cn`、`en` 两种语言，有需要其它语言的可以自行扩展，将相应语言写成 yml 文件放置于主题下的 `languages` 文件下。
-
-### 使用方式
-
-基本的 hexo 博客搭建请参照 [hexo官网][hexo]，配置完 hexo 项目后再进行下面的操作。
-
-> 以下操作均默认当前路径为 hexo 博客项目目录，请自行进入项目中。
-
-使用 git 将主题 clone 至你的 hexo 博客项目下的 themes 文件夹下
-
-``` shell
-cd themes && git clone https://github.com/Mrminfive/hexo-theme-skapp.git
+2. use `git` to clone `hexo-theme-skapp` into the theme folder under your blog project directory.
+```shell
+cd theme
+git clone https://github.com/Mrminfive/hexo-theme-skapp.git
 ```
 
-clone 完后将根目录下的 `_config.yml` 文件中的 `theme` 字段设置为 `hexo-theme-skapp`，同时安装对应 node 依赖：
-
-``` shell
+3. To modify the root `_config.yml` and install node dependencies.
+```shell
 npm install --save-dev hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
 ```
+**note**: If your OS is Windows, you may meet some problems when install the `mamboer/lunr.js`(because of the package`nodejieba`). To fix this problem, you should install `node-gyp`.
+```shell
+npm install --global windows-build-tools
+npm install -g node-gyp
+```
 
-安装完依赖后将以下配置写入根目录下的 `_config.yml` 文件中
+Then configure the root `_config.yml` file:
+```yml
+theme: hexo-theme-skapp
+# Sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
 
-``` yml
+# Autoprefixer
+autoprefixer:
+  exclude:
+    - '*.min.css'
+  browsers:
+    - 'last 2 versions'
+
 # Lunr
 lunr:
   field: all
@@ -84,30 +96,23 @@ hfc_favicons:
     windows: true
     yandex: false
 ```
+After finishing the configuration, you can preview your blog: `hexo s --debug`(If you meet the style problem, you can use the command `hexo clean` first).
 
-ok，走到这一步主题编译需要的环境配置完了，可以使用 `hexo s --debug` 进行本地预览了。
-
-### 主题配置
-
-#### 设置语言
-
-编辑根 `_config.yml` 文件，将 `language` 设置为你想要的语言：
-
-``` yml
+### More Theme Configuration
+#### set support language
+To edit the root `_config.yml` file:
+```yml
 language: zh-cn
 ```
+Now, skapp support two kinds of language:
 
-目前主题支持的语言如下：
-
-| 语言     |  代码  |
+| language|  code  |
 | ------- | ----- |
 | English | en |
 | 简体中文 | zh-cn |
 
-#### 设置菜单
-
-编辑根 `_config.yml` 文件，将 `menu` 设置为如下：
-
+#### configure the menu
+To edit the root `_config.yml` file and set the `menu` item：
 ``` yml
 menu:
   home: / 
@@ -115,37 +120,49 @@ menu:
   about: /about
 ```
 
-主题默认的菜单项有：
+Default menu items：
 
-| 键值 | 设定值 | 显示文本（简体中文）|
+| key | value | dispaly text|
 | --- | ----- | ---------------- |
-| home | home: / | 首页 |
-| archive | archive: /archives | 归档 |
-| about | about: /about | 关于 |
+| home | home: / | home |
+| archive | archive: /archives | archives |
+| about | about: /about | about |
+| search | search: /search | search | 
 
-其中 `about` 与主题内置的 `404` 页面一样需要手动创建，创建方式如下：
-
-创建一个页面：
-
-``` shell
+Then, you need create `about`,`search` and `404` page manually:
+create the about page:
+```shell
 hexo new page about
 ```
-
-然后编辑 source 文件夹下的 about 文件夹中的 index.md 文件：
+edit the `index.md` file in the root `source/about` folder:
 
 ``` md
 ---
-title: 关于
+title: abbout
 date: 2017-07-29 00:50:51
 type: about
 layout: about
 ---
 
-...(以下内容将渲染在关于页面中)
+...(the below content will be redenered in the about page)
 ```
 
-404 页面则直接在 source 目录下创建 404.md 文件，文件内容如下：
+create the search page：
+``` shell
+hexo new page search
+```
+edit the `index.md` file in the root `source/search` folder:
+``` md
+---
+title: search
+date: 2017-07-29 00:50:51
+type: search
+layout: search
+---
+```
 
+create the 404 page:
+create the `404.md` file in the source directory and edit this file:
 ``` md
 ---
 title: 404 Page Not Found
@@ -155,70 +172,68 @@ layout: error
 ---
 ```
 
-#### 博客信息配置
+####  blog information configuration
 
-以下配置均在根 `_config.yml` 中：
-
+to edit the root `_config.yml` file：
 ``` yml
 # Site
-# 博客的标题
+# blog's title
 title: MINFIVE
 
-# banner显示的子标题
+# subtitle in the banner header
 subtitle: MINFIVE BLOG
 
-# banner显示的简短介绍
+# introduction  in the banner header
 subtitle_desc: 日常学习与兴趣交流
 
-# seo关键字
+# seo keyword
 keywords: minfive, minfive blog, 前端博客, 前端, 程序员, 前端开发, 全栈开发, node.js, javascript
 
-# 博客介绍（同时用于seo）
+# blog description（for seo）
 description: 日常学习与兴趣交流的个人博客
 
-# 个人介绍
+# self introduction
 introduction: 不思量，自难忘！
 
-# 博客的favicon图标，支持本地及在线两种方式，本地请将图标放置于 themes/hexo-theme-skapp/source/img 目录下
+# your blog favicon icon, support two ways: local and online. the local way need you to put the icon under  themes/hexo-theme-skapp/source/img directory
 favicon_ico: http://oo12ugek5.bkt.clouddn.com/blog/images/favicon.ico
 
-# 博客的左上角logo图标，支持本地及在线两种方式
+# blog logo icon in the upper left corner. support the local way and online way. 
 logo: http://oo12ugek5.bkt.clouddn.com/images/logo-text-white.png
 
-# 头像/二维码（用于显示在底部）二选一
+# avatar
 avatar: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 # qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 
-# 文章的默认封面
+# page default cover
 default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
 
-# header 的背景图
+# header background picture
 header_cover: http://oo12ugek5.bkt.clouddn.com/blog/images/banner-bg.jpg
 
-# 404 页面的背景图
+# 404 page background picture
 error_page_bg: http://oo12ugek5.bkt.clouddn.com/blog/images/dogs.jpg
 
-# 页面加载loading图标
+# page loading icon
 loader_img: http://oo12ugek5.bkt.clouddn.com/blog/images/loader.gif
 
-# 站长信息
+# author information
 author:
   name: minfive
   link: https://github.com/Mrminfive
-# 用于页面 footer 的站长信息
+
+# footer information
 about:
   info: 本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。
   address: Guangzhou, Guangdong Province, China
   email: chenxiaowu1994@outlook.com
 ```
 
-#### 联系方式
 
-在 `/source/_data` 目录下创建 `contact.xml` 文件将在页面底部生成相应的标签链接，如：
+#### contact information configuration
+create `contact.yml` under the `/source/_data` (This configuration will create links in the page footer):
 
-![contact-img][contact-img]
-
-配置内容如下：
+![contact-img](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-contact.png)
 
 ``` yml
 - title: github
@@ -231,31 +246,23 @@ about:
   icon: icon-rss
   link: /atom.xml
 ```
-
-其中 `title` 表示链接的 `title` 值，`icon` 表示使用css图标，`link` 表示跳转的链接。
-
-`icon` 仅支持如下值：
-
-* `icon-email`: 邮箱
+`icon` only support these values：
+* `icon-email`: email
 * `icon-rss`: rss
 * `icon-in`: linkedin
 * `icon-twitter`: twitter
 * `icon-facebook`: facebook
 * `icon-github`: github
-* `icon-zhihu`: 知乎
-* `icon-douban`: 豆瓣
-* `icon-weibo`: 微博
+* `icon-zhihu`: zhihu
+* `icon-douban`: douban
+* `icon-weibo`: weibo
 
-#### 外部链接
+#### external link configuration
+create `footer_link.yml` under the `source/_data` directory(This configuration will create links in the page footer):
+![footer-link](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png)
 
-在 `source/_data` 目录下创建 `footer_link.xml` 文件将在页面底部生成相应的外部链接列表，如：
-
-![footer-link][footer-link]
-
-配置内容如下：
-
-```
-firend_link:
+``` yml
+friend_links:
   - name: hexo-theme-skapp
     desc: hexo-theme-skapp
     link: https://github.com/Mrminfive/hexo-theme-skapp
@@ -265,16 +272,11 @@ build_tools:
     desc: Blog Framework
     link: https://hexo.io/
 ```
+`name` means the link value, `desc` means the link `title` attribute value.
+Each array in this file represents a list of link(e.g. friend_links). Skapp support multi-column links(you just need to edit your language configuration in the `hexo-theme-skapp/languages`).
 
-其中 `name` 表示链接的显示值，`desc` 表示链接的 `title` 值，`link` 表示跳转的链接。
-
-该文件中的每一个数组代表一列链接，数据的key 值代表对应该列的标题，如：`firend_link` 对应 `友情链接`，同时允许设置多列链接，只需要在 `hexo-theme-skapp/languages` 下的语言配置中设置好相应的对照值即可。
-
-
-#### 个性化配置
-
-主题使用 sass 预编译样式，笔者将所有基本样式参数封装在 `hexo-theme-skapp/source/scss` 下的 `_theme.scss` 文件文件中：
-
+#### personalized configuration
+skapp uses `sass` precompiled style and packages all the baisc styles in the `_theme.scss` file under the `hexo-theme-skapp/source/scss` directory:
 ``` scss
 /**
  * blog theme 
@@ -311,37 +313,28 @@ $z-index--bottom: 1                                 !default;
 $z-index--center: 50                                !default;
 $z-index--top: 100                                  !default;
 ```
+#### third-part service
 
-有兴趣的可以自行修改。
-
-#### 第三方服务
-
-##### 百度统计
-
-主题已集成百度统计，使用百度统计仅需要获取百度统计的脚本id并将其配置到根 `_config.yml` 中：
-
+##### baidu statistics
+skapp has integrated baidu statistics. You need to get the id and edit the root `_config.yml` file:
 ``` yml
 # Baidu statistic
 baidu_statistic: e3267498201dfa9699a5c509424709d6
 ```
 
-##### 不蒜子统计
-
-主题使用不蒜了统计文章pv，默认不开启，可在根 `_config.yml` 配置开启:
+##### busuanzi statistics
+skapp uses busuanzi to count page PV and closed by default. You can open this service by editing the `_config.yml` file:
 
 ``` yml
 # Busuanzi
 busuanzi: true
 ```
 
-##### 内容搜索
-
-主题使用 lunr 进行站内检索，暂不支持配置。
+##### global search
+skapp uses `lunr` to search in site and don't support configuration.
 
 ##### rss
-
-将如下代码写入根 `_config.yml` 中：
-
+to edit the root `_config.yml` file:
 ``` yml
 # Feed Atom
 feed:
@@ -354,10 +347,10 @@ sitemap:
   path: sitemap.xml
 ```
 
-##### 评论系统
-
-主题集成 [gitalk][gitalk] 作为评论功能。开启评论功能需要注册 Github Application，具体请参照 [gitalk文档][gitalk doc]，申请完后在根 `_config.yml` 配置：
-
+##### Comment system
+skapp has integrated [gitalk](https://github.com/gitalk/gitalk).
+If you want to use this comment function, you need to register the Github Application(follow the [gitalk document](https://github.com/gitalk/gitalk#usage)).
+Then to edit the `_config.yml` configuration:
 ``` yml
 # Gitalk
 gitTalk:
@@ -368,11 +361,3 @@ gitTalk:
   admin: 
     - ***
 ```
-
-[demo]: http://blog.minfive.com/
-[screenshot]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-screenshot.png
-[hexo]: https://hexo.io/zh-cn/
-[gitalk]: https://github.com/gitalk/gitalk
-[gitalk doc]: https://github.com/gitalk/gitalk#usage
-[contact-img]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-contact.png
-[footer-link]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png

@@ -9,20 +9,26 @@ menu:
 
 aside:
   introduction: Introduction
-  archive: Archives
+  categorie: Categories
   tag: Tags
   latest_post: Latest Post
-  firend_link: Firend Link
+  friend_links: Friend Links
 
 footer:
   about: About
-  firend_link: Firend Link
+  friend_links: Friend Links
   build_tools: Build Tools
 
 paginator:
   next: next
   prev: prev
 
+copyright_statement:
+  one: Thanks for your reading, this article is provided by
+  two: If reproduced, please indicate the source
+  three: Thank you for reading, this article belongs to
+  four: copyright, if reproduced, please indicate the source
+
 other: 
   bout: bout
-  year: 年
+  year: Year
