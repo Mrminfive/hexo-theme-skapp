@@ -29,7 +29,7 @@ cd themes && git clone https://github.com/Mrminfive/hexo-theme-skapp.git
 clone 完后将根目录下的 `_config.yml` 文件中的 `theme` 字段设置为 `hexo-theme-skapp`，同时安装对应 node 依赖：
 
 ``` shell
-npm install --save-dev hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
+npm install --save hexo-autoprefixer hexo-filter-cleanup hexo-generator-feed hexo-generator-sitemap hexo-renderer-sass hexo-renderer-swig mamboer/lunr.js moment node-sass object-assign
 ```
 
 *注意*：如果安装失败可尝试用 cnpm 进行安装。
