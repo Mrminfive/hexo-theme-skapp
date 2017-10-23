@@ -371,7 +371,7 @@ baidu_statistic: e3267498201dfa9699a5c509424709d6
 
 ###### 谷歌统计
 
-主题已集成百度统计，使用谷歌统计仅需要获取谷歌统计的脚本id并将其配置到根 `_config.yml` 中：
+主题已集成谷歌统计，使用谷歌统计仅需要获取谷歌统计的脚本id并将其配置到根 `_config.yml` 中：
 
 ``` yml
 # Google statistic
