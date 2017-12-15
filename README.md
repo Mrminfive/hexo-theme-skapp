@@ -323,6 +323,11 @@ author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
 
+# If the article is reproduced, you need to increase the article source
+editor:
+  name: Minfive
+  link: https://www.github.com/Mrminfive
+
 ```
 `title` attribute is the blog's title. `cover` attribute is the blog's first picture and thumbnail. `author` attribute is the blog's author information and link.
 

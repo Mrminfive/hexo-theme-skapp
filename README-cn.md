@@ -365,6 +365,11 @@ author:
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
 
+# 如果文章为转载文章，需要多加文章出处项
+editor:
+  name: Minfive
+  link: https://www.github.com/Mrminfive
+
 ```
 title为文章的标题，cover为文章的首图和缩略图，author为文章的作者信息。
 
