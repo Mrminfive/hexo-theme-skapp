@@ -313,16 +313,36 @@ $z-index--bottom: 1                                 !default;
 $z-index--center: 50                                !default;
 $z-index--top: 100                                  !default;
 ```
+
+#### blog basic usage
+To configure basic info  in your markdown blog file：
+```
+title: Hello World 
+cover: http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg
+author: 
+  nick: BruceYJ
+  link: https://www.github.com/BruceYuj
+
+```
+`title` attribute is the blog's title. `cover` attribute is the blog's first picture and thumbnail. `author` attribute is the blog's author information and link.
+
 #### third-part service
 
-##### baidu statistics
+##### statistics
+###### baidu statistics
 skapp has integrated baidu statistics. You need to get the id and edit the root `_config.yml` file:
 ``` yml
 # Baidu statistic
 baidu_statistic: e3267498201dfa9699a5c509424709d6
 ```
 
-##### busuanzi statistics
+###### google statistics
+skapp has integrated google statistics. You need to get the id and edit the root `_config.yml` file:
+``` yml
+# Google statistic
+google_statistic: UA-108468870-1
+```
+###### busuanzi statistics
 skapp uses busuanzi to count page PV and closed by default. You can open this service by editing the `_config.yml` file:
 
 ``` yml
@@ -348,6 +368,7 @@ sitemap:
 ```
 
 ##### Comment system
+###### gitalk 
 skapp has integrated [gitalk](https://github.com/gitalk/gitalk).
 If you want to use this comment function, you need to register the Github Application(follow the [gitalk document](https://github.com/gitalk/gitalk#usage)).
 Then to edit the `_config.yml` configuration:
@@ -360,4 +381,15 @@ gitTalk:
   owner: ***
   admin: 
     - ***
+```
+
+###### disqus
+
+skapp has integrated[disqus](https://disqus.com/). If you want to use this comment function, you need to register Disqus(follow the official instruction).
+Then to edit the `_config.yml` configuration:
+
+``` yml
+# Disqus
+
+disqus_shortname: ***
 ```

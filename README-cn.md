@@ -356,6 +356,18 @@ $z-index--top: 100                                  !default;
 
 有兴趣的可以自行修改。
 
+#### 基本使用
+每篇文章的基本配置如下：
+```
+title: Hello World 
+cover: http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg
+author: 
+  nick: BruceYJ
+  link: https://www.github.com/BruceYuj
+
+```
+title为文章的标题，cover为文章的首图和缩略图，author为文章的作者信息。
+
 #### 第三方服务
 
 ##### 统计
@@ -371,7 +383,7 @@ baidu_statistic: e3267498201dfa9699a5c509424709d6
 
 ###### 谷歌统计
 
-主题已集成百度统计，使用谷歌统计仅需要获取谷歌统计的脚本id并将其配置到根 `_config.yml` 中：
+主题已集成谷歌统计，使用谷歌统计仅需要获取谷歌统计的脚本id并将其配置到根 `_config.yml` 中：
 
 ``` yml
 # Google statistic
