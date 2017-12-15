@@ -57,7 +57,3 @@ typings/
 # dotenv environment variables file
 .env
 
-source/baidu*
-source/Bing*
-source/google*
-
