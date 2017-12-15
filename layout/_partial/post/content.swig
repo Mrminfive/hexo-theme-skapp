@@ -48,16 +48,16 @@
     <div class="post__content">
         {{ render(page.content) }}
 
-        {% if post.editor %}
+        {% if page.editor %}
         <div class="post-announce">
             {{ __('copyright_statement.one') }}
-            <a href="{{ post.editor.url }}">{{ post.editor.name }}</a> {{ __('copyright_statement.two') }}：{{ post.editor.name }}（<a href="{{ post.editor.url }}">{{ post.editor.url }}</a>）
+            <a href="{{ page.editor.link }}">{{ page.editor.name }}</a> {{ __('copyright_statement.two') }}：{{ page.editor.name }}（<a href="{{ page.editor.link }}">{{ page.editor.link }}</a>）
         </div> 
         {% else %}
         <div class="post-announce">
             {{ __('copyright_statement.three') }}
             <a href="{{ config.url }}">{{ get_setting('title') }}</a>
-            {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(post.path) }}">{{ config.url }}{{ url_for(post.path) }}</a>）
+            {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(page.path) }}">{{ config.url }}{{ url_for(page.path) }}</a>）
         </div>
 
         <div class="post__prevs">
