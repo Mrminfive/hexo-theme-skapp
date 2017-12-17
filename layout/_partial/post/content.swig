@@ -59,6 +59,7 @@
             <a href="{{ config.url }}">{{ get_setting('title') }}</a>
             {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(page.path) }}">{{ config.url }}{{ url_for(page.path) }}</a>）
         </div>
+        {% endif %}
 
         <div class="post__prevs">
             <div class="post__prev">
