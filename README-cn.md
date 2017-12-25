@@ -370,6 +370,8 @@ editor:
   name: Minfive
   link: https://www.github.com/Mrminfive
 
+# 首页每篇文章的子标题
+subtitle: your subtitle
 ```
 title为文章的标题，cover为文章的首图和缩略图，author为文章的作者信息。
 
