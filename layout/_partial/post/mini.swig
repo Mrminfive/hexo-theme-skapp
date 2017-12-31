@@ -35,7 +35,7 @@
             <ul class="tags__list clearfix">
                 {% for tag in post.tags %}
                     <li class="tags__item">
-                        <a href="{{ tag.path }}">{{ tag.name }}</a>
+                        <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
                     </li>
                 {% endfor %}
             </ul>
