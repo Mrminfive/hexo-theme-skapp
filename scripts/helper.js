@@ -135,7 +135,7 @@ hexo.extend.helper.register('s_paginator', function(size = 2) {
         } else {
             items.push(renderItem({
                 str: i,
-                link: url_for(i === 1 ? '' : Util.format(link, i))
+                link: url_for(i === 1 ? page.base : Util.format(link, i))
             }));
         }
     }
