@@ -90,7 +90,7 @@ hexo.extend.helper.register('latest_post', function(len = 4) {
                     <li class="latest-post-item">
                         <a href="${ this.url_for(post.path) }" title="${ post.title }">
                             <div class="item__cover">
-                                <img src="${ post.cover }" alt="${ post.title }" />
+                                <img src="${ post.cover|| hexo.config.default_cover || hexo.theme.config.default_cover }" alt="${ post.title }" />
                             </div>
                             <div class="item__info">
                                 <h3 class="item__title">${ post.title }</h3>
