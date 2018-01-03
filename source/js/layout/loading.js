@@ -1,6 +1,5 @@
 // loading
 document.onreadystatechange = function(){
-    console.log(document.readyState)
     if (document.readyState == 'interactive') {
         window.setTimeout(function(){
             disableLoad()
