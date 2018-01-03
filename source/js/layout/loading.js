@@ -1,15 +1,15 @@
 // loading
 document.onreadystatechange = function(){
+    var page = document.getElementById('page');
     if (document.readyState == 'interactive') {
         window.setTimeout(function(){
-            disableLoad()
+            disableLoad();
         },4000)
     }
 
-    if (document.readyState == 'complete') {
-        var page = document.getElementById('page')
+    if (document.readyState == 'complete') {        
         if (page.classList.contains('js-hidden')) {
-            disableLoad()
+            disableLoad();
         }
     }
 }
