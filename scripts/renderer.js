@@ -105,7 +105,7 @@ hexo.extend.generator.register('lunr', function(locals){
                 tags: tags,
                 tagArr: tagArr,
                 cates: cates,
-                cover: post.cover || hexo.config.default_cover || hexo.theme.default_cover,
+                cover: post.cover || hexo.config.default_cover || hexo.theme.config.default_cover,
                 desc: post.subtitle || post.excerpt || "",
                 date: moment(post.date).locale('zh-cn').format(),
                 day: moment(post.date).locale('zh-cn').format('D'),

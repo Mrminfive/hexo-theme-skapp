@@ -328,6 +328,8 @@ editor:
   name: Minfive
   link: https://www.github.com/Mrminfive
 
+# post subtitle in your index page
+subtitle: post introduction
 ```
 `title` attribute is the blog's title. `cover` attribute is the blog's first picture and thumbnail. `author` attribute is the blog's author information and link.
 
