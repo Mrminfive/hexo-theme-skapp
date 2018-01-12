@@ -287,6 +287,7 @@ about:
 * `icon-zhihu`: 知乎
 * `icon-douban`: 豆瓣
 * `icon-weibo`: 微博
+* `icon-telegram`: telegram
 
 #### 外部链接
 

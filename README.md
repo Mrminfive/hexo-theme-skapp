@@ -256,6 +256,7 @@ create `contact.yml` under the `/source/_data` (This configuration will create l
 * `icon-zhihu`: zhihu
 * `icon-douban`: douban
 * `icon-weibo`: weibo
+* `icon-telegram`: telegram
 
 #### external link configuration
 create `footer_link.yml` under the `source/_data` directory(This configuration will create links in the page footer):
