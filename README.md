@@ -97,7 +97,7 @@ hfc_favicons:
     yandex: false
 ```
 After finishing the configuration, you can preview your blog: `hexo s --debug`(If you meet the style problem, you can use the command `hexo clean` first).
-
+**note**: If you face the problem that lacking some js files(404 error), you should use `hexo s` instead of `hexo s --debug`
 ### More Theme Configuration
 #### set support language
 To edit the root `_config.yml` file:
