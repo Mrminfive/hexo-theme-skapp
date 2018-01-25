@@ -136,6 +136,5 @@ hexo.extend.generator.register('lunr', function(locals){
         });
         store = {};
     }
-    console.log(finalData);
     return finalData;   
 });
