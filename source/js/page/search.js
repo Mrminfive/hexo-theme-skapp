@@ -14,7 +14,7 @@
             this.loading = this.container.querySelector('.search__loader');
             this.tpl = [
                 '<h2 class="search__result-wrap">',
-                    this.config.language == 'en'?'Find <em>{{ num }}</em> {{ enDescription }} that match <em>{{ query }}</em>':'找到匹配<em>{{ query }}</em>的结果<em>{{ num }}</em>条',
+                    this.config.language == 'en'?'Find <em>{{ num }}</em> {{ enDescription }} <em>{{ query }}</em>':'找到匹配<em>{{ query }}</em>的结果<em>{{ num }}</em>条',
                 '</h2>',
                 '<div class="page__posts clearfix">',
                     '{{ posts }}',
@@ -127,7 +127,7 @@
                     query: this.queryString,
                     num: this.filteredData.length,
                     posts: articlesHtml,
-                    enDescription: (this.filteredData.length > 1 ? 'results' : 'result')
+                    enDescription: (this.filteredData.length > 1 ? 'results that match ' : 'result that matches ')
                 });
             }
 
