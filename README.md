@@ -123,7 +123,7 @@ menu:
 
 Default menu items：
 
-| key | value | dispaly text|
+| key | value | display text|
 | --- | ----- | ---------------- |
 | home | home: / | home |
 | archive | archive: /archives | archives |
