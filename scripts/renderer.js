@@ -21,7 +21,8 @@ hexo.extend.generator.register('lunr', function(locals){
         pages = [],
         items,
         res = {"all":[]},
-        year1;
+        year1,
+        language = config.language;
 
     switch(field){
         case '':
@@ -41,9 +42,9 @@ hexo.extend.generator.register('lunr', function(locals){
     //grouping
     items.forEach(function(post){
         if(post.date._isAMomentObject) {
-            year1 = post.date.format('YYYY');    
+            year1 = (language == 'en'?post.date.format('YYY'):post.date.format('YYYY'));    
         } else {
-            year1 = moment(post.date).format('YYYY');
+            year1 = (language == 'en'?post.date.format('YYY'):moment(post.date).format('YYYY'));
         }
         if(!res[year1]){
             res[year1] = [post];    
@@ -109,7 +110,7 @@ hexo.extend.generator.register('lunr', function(locals){
                 desc: post.subtitle || post.excerpt || "",
                 date: moment(post.date).locale('zh-cn').format(),
                 day: moment(post.date).locale('zh-cn').format('D'),
-                month: moment(post.date).locale('zh-cn').format('MMMM'),
+                month: (language == 'en'?moment(post.date).locale('en').format('MMM'):moment(post.date).locale('zh-cn').format('MMMM')),
                 authorLink: post.author 
                     && post.author.link 
                     || hexo.config.author
@@ -135,5 +136,6 @@ hexo.extend.generator.register('lunr', function(locals){
         });
         store = {};
     }
+    console.log(finalData);
     return finalData;   
 });

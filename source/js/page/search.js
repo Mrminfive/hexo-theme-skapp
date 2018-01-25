@@ -2,7 +2,8 @@
     function SearchPage() {
         this.config = {
             minScore: 1e-5,
-            minNum: 3 
+            minNum: 3,
+            language: document.querySelector('html').getAttribute('lang') 
         },
         this.init();
     }
@@ -13,7 +14,7 @@
             this.loading = this.container.querySelector('.search__loader');
             this.tpl = [
                 '<h2 class="search__result-wrap">',
-                    '找到匹配<em>{{ query }}</em>的结果<em>{{ num }}</em>条',
+                    this.config.language == 'en'?'Find <em>{{ num }}</em> {{ enDescription }} that match <em>{{ query }}</em>':'找到匹配<em>{{ query }}</em>的结果<em>{{ num }}</em>条',
                 '</h2>',
                 '<div class="page__posts clearfix">',
                     '{{ posts }}',
@@ -109,9 +110,10 @@
         render: function() {
             var filteredData = this.filteredData;
             var articlesHtml = '';
-            var result = '抱歉，您要的内容似乎没有哦，不如换个关键字试试吧。';
+            var result = (this.config.language == 'en'?'Sorry,the content of your search does not exist!':'抱歉，您要的内容似乎没有哦，不如换个关键字试试吧。');
             var self = this;
 
+            console.log("this:"+JSON.stringify(this));
             if (filteredData.length) {
                 this.filteredData = this.filteredData.map(function(item) {
                     item.tagsHtml = self.compileTemplate(self.tagsTpl, item.tagArr);
@@ -124,7 +126,8 @@
                 result = this.compileTemplate(this.tpl, {
                     query: this.queryString,
                     num: this.filteredData.length,
-                    posts: articlesHtml
+                    posts: articlesHtml,
+                    enDescription: (this.filteredData.length > 1 ? 'results' : 'result')
                 });
             }
 
