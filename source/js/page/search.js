@@ -127,7 +127,7 @@
                     query: this.queryString,
                     num: this.filteredData.length,
                     posts: articlesHtml,
-                    enDescription: (this.filteredData.length > 1 ? 'results that match ' : 'result that matches ')
+                    enDescription: (this.filteredData.length > 1 ? 'results that match' : 'result that matches')
                 });
             }
 
