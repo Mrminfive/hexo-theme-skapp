@@ -111,6 +111,7 @@ ok，走到这一步主题编译需要的环境配置完了，可以使用 `hexo
 
 *注：*如果样式生成失败，请用 `hexo clean` 清除下缓存后在 `hexo s --debug`。
 
+*注：*如果调试时遇到缺少某些js文件(404error)，使用`hexo s`来替代`hexo s --debug`来调试
 ### 主题配置
 
 #### 设置语言
@@ -287,6 +288,7 @@ about:
 * `icon-zhihu`: 知乎
 * `icon-douban`: 豆瓣
 * `icon-weibo`: 微博
+* `icon-telegram`: telegram
 
 #### 外部链接
 

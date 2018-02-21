@@ -98,6 +98,7 @@ hfc_favicons:
 ```
 After finishing the configuration, you can preview your blog: `hexo s --debug`(If you meet the style problem, you can use the command `hexo clean` first).
 
+**note**: If you face the problem that lacking some js files(404 error), you should use `hexo s` instead of `hexo s --debug`
 ### More Theme Configuration
 #### set support language
 To edit the root `_config.yml` file:
@@ -122,7 +123,7 @@ menu:
 
 Default menu items：
 
-| key | value | dispaly text|
+| key | value | display text|
 | --- | ----- | ---------------- |
 | home | home: / | home |
 | archive | archive: /archives | archives |
@@ -256,6 +257,7 @@ create `contact.yml` under the `/source/_data` (This configuration will create l
 * `icon-zhihu`: zhihu
 * `icon-douban`: douban
 * `icon-weibo`: weibo
+* `icon-telegram`: telegram
 
 #### external link configuration
 create `footer_link.yml` under the `source/_data` directory(This configuration will create links in the page footer):
