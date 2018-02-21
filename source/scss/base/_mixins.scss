@@ -103,6 +103,8 @@
         padding: .5em;
         -webkit-overflow-scrolling: touch;
         overflow: auto;
+        font-size: 12px;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
         & + & {
             margin: 10px 0;
