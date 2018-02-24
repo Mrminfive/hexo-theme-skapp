@@ -11,7 +11,3 @@
 {% block main %}
     {% include './_partial/archive/main.swig' %}
 {% endblock %}
-
-{% block pagejs %}
-    {{ js('js/page/archive.js') }}
-{% endblock %}
