@@ -325,3 +325,19 @@ hexo.extend.helper.register('s_paginator', function(size = 2) {
         </nav>
     `;
 });
+
+hexo.extend.helper.register('json', function(data) {
+    var cache = [];
+    return JSON.stringify(data, function (key, value) {
+        if (typeof value === 'object' && value !== null) {
+            if (cache.indexOf(value) !== -1) {
+                // Circular reference found, discard key
+                return;
+            }
+            // Store value in our collection
+            cache.push(value);
+        }
+        return value;
+    });
+    cache = null;
+});
