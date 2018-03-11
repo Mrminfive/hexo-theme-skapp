@@ -131,6 +131,7 @@ Default menu items：
 | search | search: /search | search | 
 
 Then, you need create `about`,`search` and `404` page manually:
+
 create the about page:
 ```shell
 hexo new page about
@@ -139,7 +140,7 @@ edit the `index.md` file in the root `source/about` folder:
 
 ``` md
 ---
-title: abbout
+title: about
 date: 2017-07-29 00:50:51
 type: about
 layout: about
@@ -148,7 +149,7 @@ layout: about
 ...(the below content will be redenered in the about page)
 ```
 
-create the search page：
+create the search page:
 ``` shell
 hexo new page search
 ```
@@ -162,8 +163,7 @@ layout: search
 ---
 ```
 
-create the 404 page:
-create the `404.md` file in the source directory and edit this file:
+To create the 404 page, create the `404.md` file in the source directory and edit this file:
 ``` md
 ---
 title: 404 Page Not Found
@@ -275,7 +275,7 @@ build_tools:
     link: https://hexo.io/
 ```
 `name` means the link value, `desc` means the link `title` attribute value.
-Each array in this file represents a list of link(e.g. friend_links). Skapp support multi-column links(you just need to edit your language configuration in the `hexo-theme-skapp/languages`).
+Each array in this file represents a list of link(e.g. `friend_links`). Skapp support multi-column links(you just need to edit your language configuration in the `hexo-theme-skapp/languages`).
 
 #### personalized configuration
 skapp uses `sass` precompiled style and packages all the baisc styles in the `_theme.scss` file under the `hexo-theme-skapp/source/scss` directory:
@@ -317,7 +317,7 @@ $z-index--top: 100                                  !default;
 ```
 
 #### blog basic usage
-To configure basic info  in your markdown blog file：
+To configure basic info in your markdown blog file:
 ```
 title: Hello World 
 cover: http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg
@@ -381,6 +381,7 @@ sitemap:
 skapp has integrated [gitalk](https://github.com/gitalk/gitalk).
 If you want to use this comment function, you need to register the Github Application(follow the [gitalk document](https://github.com/gitalk/gitalk#usage)).
 Then to edit the `_config.yml` configuration:
+
 ``` yml
 # Gitalk
 gitTalk:

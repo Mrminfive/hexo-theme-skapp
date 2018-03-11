@@ -176,7 +176,7 @@ layout: about
 hexo new page search
 ```
 
-然后编辑 source 文件夹下的 about 文件夹中的 index.md 文件：
+然后编辑 source 文件夹下的 search 文件夹中的 index.md 文件：
 
 ``` md
 ---
