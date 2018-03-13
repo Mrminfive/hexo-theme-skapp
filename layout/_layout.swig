@@ -48,5 +48,7 @@
 
     {% block other %}
     {% endblock %}
+
+    {% include './_partial/common/math.swig' %}
 </body>
 </html>

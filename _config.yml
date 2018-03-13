@@ -1,33 +1,32 @@
+# Math Equations Render Support
+math:
+  enable: false
 
-# Site
-title: MINFIVE
-subtitle: MINFIVE BLOG
-subtitle_desc: 日常学习与兴趣交流
-keywords: minfive, minfive blog, 前端博客, 前端, 程序员, 前端开发, 全栈开发, node.js, javascript
-description: 日常学习与兴趣交流的个人博客
-introduction: 不思量，自难忘！
-favicon_ico: http://oo12ugek5.bkt.clouddn.com/blog/images/favicon.ico
-logo: http://oo12ugek5.bkt.clouddn.com/images/logo-text-white.png
-qrcode: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
-default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
-header_cover: http://oo12ugek5.bkt.clouddn.com/blog/images/banner.jpeg
-error_page_bg: http://oo12ugek5.bkt.clouddn.com/blog/images/dogs.jpg
-author:
-  name: minfive
-  link: https://github.com/Mrminfive
-about:
-  info: 本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击右下角订阅 rss。
-  address: Guangzhou, Guangdong Province, China
-  email: chenxiaowu1994@outlook.com
+  # Default(true) will load mathjax/katex script on demand
+  # That is it only render those page who has 'mathjax: true' in Front Matter.
+  # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
+  per_page: true
 
-# Menu
-menu:
-  home: / 
-  archive: /archives
-  works: /demo
-  music: /music
-  about: /about
+  engine: mathjax
+  #engine: katex
 
-highlight_theme: normal
+  # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
+  mathjax:
+    # Use 2.7.1 as default, jsdelivr as default CDN, works everywhere even in China
+    cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
+    #cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
+    #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
+    # For automatic detect latest version link to MathJax.js and get from Bootcss.
+    #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
-loader_img: http://oo12ugek5.bkt.clouddn.com/blog/images/loader.gif
+  # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin)
+  # needed to full Katex support.
+  katex:
+    # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
+    cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
+    # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
+    #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
+    # Bootcss, works great in China, but not so well in other region
+    #cdn: //cdn.bootcss.com/KaTeX/0.7.1/katex.min.css
