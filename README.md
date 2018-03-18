@@ -6,7 +6,7 @@ This project is a hexo theme named skapp.
 [Demo](http://blog.minfive.com/)
 
 #### theme effect
-![theme effect](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-screenshot.png)
+![theme effect](https://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-screenshot.png)
 
 #### language support
 `skapp` supports `zh-cn` and `en` by default. If you need other languages, you can extend it by yourself(to put the language yml file into the `languages` folder under the `hexo-theme-skapp` directory).
