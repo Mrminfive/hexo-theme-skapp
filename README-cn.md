@@ -20,6 +20,8 @@
 
 > 以下操作均默认当前路径为 hexo 博客项目目录，请自行进入项目中。
 
+**注意**：**目前nodejieba2.2.5在node10版本中build会报错，nodejieba2.2.6已经修复了该bug，但是lunr仍然使用的是nodejieba2.2.5.因此建议使用node LTS版本,比如8.9.3** 
+
 使用 git 将主题 clone 至你的 hexo 博客项目下的 themes 文件夹下
 
 ``` shell

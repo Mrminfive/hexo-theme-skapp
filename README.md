@@ -15,9 +15,11 @@ This project is a hexo theme named skapp.
 1. Follow the [hexo official document](https://hexo.io/) to build the basic blog.
 >  the default path of the following operations is your hexo blog project directory, please enter the project.
 
+**note**：**We recommend use node LTS version like node 8.9.3 because nodejieba 2.2.5 dependency has a build error in node 10 version** 
+
 2. use `git` to clone `hexo-theme-skapp` into the theme folder under your blog project directory.
 ```shell
-cd theme
+cd themes
 git clone https://github.com/Mrminfive/hexo-theme-skapp.git
 ```
 
