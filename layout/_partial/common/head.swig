@@ -16,6 +16,29 @@
 
 <link rel="icon" type="image/png" href="{{ get_setting('favicon_ico') }}" sizes="32x32">
 
+{% if config.google_site_verification %}
+  <meta name="google-site-verification" content="{{ config.google_site_verification }}" />
+{% endif %}
+
+{% if config.bing_site_verification %}
+  <meta name="msvalidate.01" content="{{ config.bing_site_verification }}" />
+{% endif %}
+
+{% if config.yandex_site_verification %}
+  <meta name="yandex-verification" content="{{ config.yandex_site_verification }}" />
+{% endif %}
+
+
+{% if config.baidu_site_verification %}
+  <meta name="baidu-site-verification" content="{{ config.baidu_site_verification }}" />
+{% endif %}
+
+
+{% if config.qihu_site_verification %}
+  <meta name="360-site-verification" content="{{ config.qihu_site_verification }}" />
+{% endif %}
+
+
 <!-- Prefetch -->
 {% include './prefetch.swig' %}
 
