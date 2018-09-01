@@ -258,9 +258,17 @@ To configure basic info in your markdown blog file:
 ```
 title: Hello World 
 cover: http://oxnuwmm3w.bkt.clouddn.com/hello-world.jpeg
+# author information, multiple authors are set to array
+# single author
 author: 
   nick: BruceYJ
   link: https://www.github.com/BruceYuj
+# multiple authors
+author:
+  - nick: BruceYJ
+    link: https://www.github.com/BruceYuj
+  - nick: minfive
+    link: https://www.github.com/Mrminfive
 
 # If the article is reproduced, you need to increase the article source
 editor:

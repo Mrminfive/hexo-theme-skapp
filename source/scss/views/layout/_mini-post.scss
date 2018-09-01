@@ -128,9 +128,15 @@ body {
     color: $hint-fc;
     text-align: right;
 
-    & span a {
+    & > span a {
         color: $main-color;
         text-decoration: none;
+    }
+
+    & .author__item + .author__item::before {
+        content: '&';
+        color: $main-fc;
+        margin-right: 4px;
     }
 }
 

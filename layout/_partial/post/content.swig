@@ -10,9 +10,17 @@
             <div class="mark__block">
                 <i class="mark__icon iconfont icon-write"></i>
                 <ul class="mark__list clearfix">
-                    <li class="mark__item">
-                        <a href="{{ url_for(page.author.link || '') }}">{{ page.author.nick|default(get_setting(author.name)) }}</a>
-                    </li>
+                    {% if Array.isArray(page.author) %}
+                        {% for user in page.author %}
+                            <li class="mark__item">
+                                <a href="{{ url_for(user.link || '') }}">{{ (user.nick || user.name)|default(get_setting(author.name)) }}</a>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="mark__item">
+                            <a href="{{ url_for(page.author.link || '') }}">{{ (page.author.nick || page.author.name)|default(get_setting(author.name)) }}</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
             
