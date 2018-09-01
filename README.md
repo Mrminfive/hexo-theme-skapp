@@ -33,74 +33,9 @@ npm install -g windows-build-tools
 npm install -g node-gyp
 ```
 
-Then configure the root `_config.yml` file:
-```yml
-theme: hexo-theme-skapp
-# Sass
-node_sass:
-  outputStyle: nested
-  precision: 5
-  sourceComments: false
+After finishing the install, you can preview your blog: `hexo server`(If you meet the style problem, you can use the command `hexo clean` first).
 
-# Autoprefixer
-autoprefixer:
-  exclude:
-    - '*.min.css'
-  browsers:
-    - 'last 2 versions'
-
-# Lunr
-lunr:
-  field: all
-  fulltext: false
-  path: assets/lunr/
-
-# filter_cleanup
-hfc_useref:
-  enable: true
-  concat: true
-
-hfc_html:
-  enable: true
-  exclude:
-
-hfc_css:
-  enable: true
-  exclude: 
-    - '*.min.css'
-
-hfc_js:
-  enable: true
-  mangle: true
-  exclude: 
-    - '*.min.js'
-
-hfc_img:
-  enable: false
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: false
-
-hfc_favicons:
-  enable: false
-  src: img/blog-logo.png
-  target: img/
-  icons:
-    android: true
-    appleIcon: true
-    appleStartup: false
-    coast: false
-    favicons: true
-    firefox: false
-    opengraph: false
-    windows: true
-    yandex: false
-```
-After finishing the configuration, you can preview your blog: `hexo s --debug`(If you meet the style problem, you can use the command `hexo clean` first).
-
-**note**: If you face the problem that lacking some js files(404 error), you should use `hexo s` instead of `hexo s --debug`
+**note**: If you face the problem that lacking some js files(404 error), you should use `hexo server` instead of `hexo server -l`
 ### More Theme Configuration
 #### set support language
 To edit the root `_config.yml` file:
@@ -344,14 +279,14 @@ subtitle: post introduction
 skapp has integrated baidu statistics. You need to get the id and edit the root `_config.yml` file:
 ``` yml
 # Baidu statistic
-baidu_statistic: e3267498201dfa9699a5c509424709d6
+baidu_statistic: ***
 ```
 
 ###### google statistics
 skapp has integrated google statistics. You need to get the id and edit the root `_config.yml` file:
 ``` yml
 # Google statistic
-google_statistic: UA-108468870-1
+google_statistic: ***
 ```
 ###### busuanzi statistics
 skapp uses busuanzi to count page PV and closed by default. You can open this service by editing the `_config.yml` file:

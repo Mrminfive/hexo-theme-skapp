@@ -43,77 +43,12 @@ npm install -g node-gyp
 
 (确认 `PATH` 中 `python` 路径是否设置。)
 
-安装完依赖后将以下配置写入根目录下的 `_config.yml` 文件中
+ok，走到这一步主题编译需要的环境配置完了，可以使用 `hexo server` 进行本地预览了。
 
-``` yml
-# Sass
-node_sass:
-  outputStyle: nested
-  precision: 5
-  sourceComments: false
+*注：*如果样式生成失败，请用 `hexo clean` 清除下缓存后再 `hexo server`。
 
-# Autoprefixer
-autoprefixer:
-  exclude:
-    - '*.min.css'
-  browsers:
-    - 'last 2 versions'
+*注：*如果调试时遇到缺少某些js文件(404error)，使用 `hexo server`来替代`hexo server -l` 来调试
 
-# Lunr
-lunr:
-  field: all
-  fulltext: false
-  path: assets/lunr/
-
-# filter_cleanup
-hfc_useref:
-  enable: true
-  concat: true
-
-hfc_html:
-  enable: true
-  exclude:
-
-hfc_css:
-  enable: true
-  exclude: 
-    - '*.min.css'
-
-hfc_js:
-  enable: true
-  mangle: true
-  exclude: 
-    - '*.min.js'
-
-hfc_img:
-  enable: false
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: false
-
-hfc_favicons:
-  enable: false
-  src: img/blog-logo.png
-  target: img/
-  icons:
-    android: true
-    appleIcon: true
-    appleStartup: false
-    coast: false
-    favicons: true
-    firefox: false
-    opengraph: false
-    windows: true
-    yandex: false
-```
-
-ok，走到这一步主题编译需要的环境配置完了，可以使用 `hexo s --debug` 进行本地预览了。
-
-*注：*如果样式生成失败，请用 `hexo clean` 清除下缓存后在 `hexo s --debug`。
-
-*注：*如果调试时遇到缺少某些js文件(404error)，使用`hexo s`来替代`hexo s --debug`来调试
 ### 主题配置
 
 #### 设置语言
@@ -389,7 +324,7 @@ title为文章的标题，cover为文章的首图和缩略图，author为文章�
 
 ``` yml
 # Baidu statistic
-baidu_statistic: e3267498201dfa9699a5c509424709d6
+baidu_statistic: ***
 ```
 
 ###### 谷歌统计
@@ -398,7 +333,7 @@ baidu_statistic: e3267498201dfa9699a5c509424709d6
 
 ``` yml
 # Google statistic
-google_statistic: UA-108468870-1
+google_statistic: ***
 ```
 
 ##### 不蒜子统计
