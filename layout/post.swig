@@ -18,4 +18,5 @@
 
 {% block other %}
     {% include './_partial/common/comment.swig' %}
+    {% include './_partial/post/post-statistical.swig' %}
 {% endblock %}

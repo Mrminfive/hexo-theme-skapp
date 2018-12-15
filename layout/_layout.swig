@@ -50,8 +50,5 @@
     {% endblock %}
 
     {% include './_partial/common/math.swig' %}
-    {% if config.busuanzi %}
-        {% include './_partial/post/post-statistical.swig' %}
-    {% endif %}
 </body>
 </html>
