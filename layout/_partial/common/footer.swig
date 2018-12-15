@@ -52,6 +52,9 @@
                 <a href="https://github.com/Mrminfive/hexo-theme-skapp" target="_blank">Skapp</a> 2017 powered by
                 <a href="http://hexo.io/" target="_blank">Hexo</a>, made by 
                 <a href="https://github.com/Mrminfive" target="_blank">minfive</a>.
+                {% if config.busuanzi %}
+                <span id="busuanzi_container_site_pv">Total number of visits：<span id="busuanzi_value_site_pv"></span></span>&nbsp;Total visitor number:<span id="busuanzi_value_site_uv"></span>
+                {% endif %}
             </p>
             <ul class="footer__social-network clearfix">
                 {% if site.data.contact %}
