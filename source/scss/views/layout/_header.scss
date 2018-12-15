@@ -70,14 +70,14 @@ body {
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba(64, 84, 90, 0.6);
+        background-color: rgba(16, 0, 90, 0.12);
     }
 
     &--small {
         .page__navbar {
             height: $nav-height;
-            background: $main-color;
-            background: linear-gradient(to right, $main-color 35%, $main-color--hover 100%);
+            background: rgba(16, 0, 90, 0.12);
+            background: linear-gradient(to right, rgba(16, 0, 90, 0.12) 35%, rgba(16, 0, 90, 0.12) 100%);
         }
 
         .page__logo {
@@ -85,7 +85,7 @@ body {
         }
 
         .page__nav .nav__item a:hover {
-            color: darken($main-color, 20%);
+            color: darken(rgba(16, 0, 90, 0.12), 20%);
         }
     }
 }

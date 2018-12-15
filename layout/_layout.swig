@@ -41,6 +41,15 @@
         <script type="text/javascript" src="js/layout/header.js"></script>
         <script type="text/javascript" src="js/layout/back-top.js"></script>
         <script type="text/javascript" src="js/layout/post.js"></script>
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffaad2994a5f8f16d591e919e16488df";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
     <!-- endbuild -->
 
     {% block pagejs %}
