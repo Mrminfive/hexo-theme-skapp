@@ -37,8 +37,8 @@
                 </span>
             {% endif %}
         </p>
-        <p itemprop="articleSection" class="min-article__desc">
-            {{ post.subtitle }}
+        <p itemprop="articleSection" class="min-article__desc" style="cursor:pointer" onclick="window.location.href='{{ url_for(post.path) }}'">
+            <span itemprop="url" title="{{ post.subtitle }}">{{ post.subtitle }}</span>
         </p>
         <div class="min-article__tags">
             <i class="iconfont icon-tab"></i>

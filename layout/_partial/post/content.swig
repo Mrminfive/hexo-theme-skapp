@@ -54,6 +54,7 @@
     </header>
 
     <div class="post__content">
+
         {{ render(page.content) }}
 
         {% if page.editor %}
