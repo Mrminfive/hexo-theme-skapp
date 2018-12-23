@@ -11,7 +11,7 @@
                     {% for item in get_setting('menu') %}
                         {% set name = __('menu.' + loop.key) %}
                         <li class="nav__item">
-                            <a href="{{ item }}" alt="{{ name }}" title="{{ name }}">{{ name }}</a>
+                            <a href="{{ item }}" alt="{{ name }}" {% if name == 'Github' %}target="_blank"{% endif %} title="{{ name }}">{{ name }}</a>
                         </li>
                     {% endfor %}
                 </ul>
