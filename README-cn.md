@@ -441,7 +441,7 @@ math:
 
 
 [demo]: http://blog.minfive.com/
-[screenshot]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-screenshot.png
+[screenshot]: http://blog.static.minfive.com/other/Skapp.png
 [hexo]: https://hexo.io/zh-cn/
 [gitalk]: https://github.com/gitalk/gitalk
 [gitalk doc]: https://github.com/gitalk/gitalk#usage
