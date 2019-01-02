@@ -160,7 +160,7 @@ description: 日常学习与兴趣交流的个人博客
 introduction: 不思量，自难忘！
 
 # 博客的favicon图标，支持本地及在线两种方式，本地请将图标放置于 themes/hexo-theme-skapp/source/img 目录下
-favicon_ico: http://oo12ugek5.bkt.clouddn.com/blog/images/favicon.ico
+favicon_ico: https://blog.static.minfive.com/other/favicon.ico
 
 # 博客的左上角logo图标，支持本地及在线两种方式
 logo: http://oo12ugek5.bkt.clouddn.com/images/logo-text-white.png
@@ -173,13 +173,13 @@ avatar: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
 
 # header 的背景图
-header_cover: http://oo12ugek5.bkt.clouddn.com/blog/images/banner-bg.jpg
+header_cover: https://blog.static.minfive.com/other/banner-bg.jpg
 
 # 404 页面的背景图
-error_page_bg: http://oo12ugek5.bkt.clouddn.com/blog/images/dogs.jpg
+error_page_bg: https://blog.static.minfive.com/other/dogs.jpg
 
 # 页面加载loading图标
-loader_img: http://oo12ugek5.bkt.clouddn.com/blog/images/loader.gif
+loader_img: https://blog.static.minfive.com/other/loader.gif
 
 # 站长信息
 author:
@@ -445,7 +445,7 @@ math:
 [hexo]: https://hexo.io/zh-cn/
 [gitalk]: https://github.com/gitalk/gitalk
 [gitalk doc]: https://github.com/gitalk/gitalk#usage
-[contact-img]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-contact.png
-[footer-link]: http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png
+[contact-img]: https://blog.static.minfive.com/other/17-09-17/hexo-theme-skapp-contact.png
+[footer-link]: https://blog.static.minfive.com/other/17-09-17/hexo-theme-skapp-footer.png
 [disqus]: https://disqus.com/
 [math]: https://github.com/hexojs/hexo-math

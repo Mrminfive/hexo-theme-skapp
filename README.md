@@ -134,7 +134,7 @@ description: 日常学习与兴趣交流的个人博客
 introduction: 不思量，自难忘！
 
 # your blog favicon icon, support two ways: local and online. the local way need you to put the icon under  themes/hexo-theme-skapp/source/img directory
-favicon_ico: http://oo12ugek5.bkt.clouddn.com/blog/images/favicon.ico
+favicon_ico: https://blog.static.minfive.com/other/favicon.ico
 
 # blog logo icon in the upper left corner. support the local way and online way. 
 logo: http://oo12ugek5.bkt.clouddn.com/images/logo-text-white.png
@@ -147,13 +147,13 @@ avatar: http://oo12ugek5.bkt.clouddn.com/images/qrcode.png
 default_cover: http://oo12ugek5.bkt.clouddn.com/images/default_cover.png
 
 # header background picture
-header_cover: http://oo12ugek5.bkt.clouddn.com/blog/images/banner-bg.jpg
+header_cover: https://blog.static.minfive.com/other/banner-bg.jpg
 
 # 404 page background picture
-error_page_bg: http://oo12ugek5.bkt.clouddn.com/blog/images/dogs.jpg
+error_page_bg: https://blog.static.minfive.com/other/dogs.jpg
 
 # page loading icon
-loader_img: http://oo12ugek5.bkt.clouddn.com/blog/images/loader.gif
+loader_img: https://blog.static.minfive.com/other/loader.gif
 
 # author information
 author:
@@ -171,7 +171,7 @@ about:
 #### contact information configuration
 create `contact.yml` under the `/source/_data` (This configuration will create links in the page footer):
 
-![contact-img](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-contact.png)
+![contact-img](https://blog.static.minfive.com/other/17-09-17/hexo-theme-skapp-contact.png)
 
 ``` yml
 - title: github
@@ -198,7 +198,7 @@ create `contact.yml` under the `/source/_data` (This configuration will create l
 
 #### external link configuration
 create `footer_link.yml` under the `source/_data` directory(This configuration will create links in the page footer):
-![footer-link](http://oo12ugek5.bkt.clouddn.com/blog/images/17-09-17/hexo-theme-skapp-footer.png)
+![footer-link](https://blog.static.minfive.com/other/17-09-17/hexo-theme-skapp-footer.png)
 
 ``` yml
 friend_links:
