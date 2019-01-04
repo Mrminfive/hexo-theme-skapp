@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     {% block title %}
-        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.seotitle|default(theme.seotitle) }}</title>
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.seotitle|default(theme.seotitle) }}</title>
     {% endblock %}
 
     {% include './_partial/common/head.swig' %}
